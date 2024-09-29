@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Sustainability Summit 2024 Registration Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        :root {
+        --primary-color: #4caf50;
+        --secondary-color: #45a049;
+        --background-color: #f0f8ff;
+        --text-color: #333;
+        --error-color: #ff6b6b;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        transition: all 0.3s ease;
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .logo img {
+        max-width: 600px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      h2 {
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: slideIn 1s ease-in-out;
+      }
+
+      form {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: black;
+      }
+
+      .event-details {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+
+  .event-details h2, .event-details h3, .event-details h4 {
+    color: #2c3e50;
+  }
+
+  .event-details p {
+    margin: 10px 0;
+  }
+
+  .event-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+        /* Your existing styles here */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #calculatorContent {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #calculatorContent select,
+        #calculatorContent input,
+        #calculatorContent button {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+        .calculator input, .calculator select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 2px solid #4a90e2;
+            border-radius: 4px;
+            font-size: 1em;
+            background-color: #fff;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+    </style>
+</head>
+<body><div class="logo">
+    <img
+      src="IISDImage.png"
+      alt="Global Sustainability Summit Logo"
+    />
+  </div>
+    <h2>Global Sustainability Summit 2024 Registration Form</h2>
+    
+    <form
+      id="registrationForm"
+      method="post"
+      action="https://script.google.com/macros/s/AKfycbyXBTNyfLX_cdbqff5EOCrRdCc0gwGE38baDsfy7SGAzTbupBTaK1TJxmu187rZQqya/exec"
+    >
+    <!-- Title Field (Optional) -->
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+    <div style="margin-bottom: 15px;">
+      <label for="title" style="font-weight: bold; color: #2c3e50;">Title</label><br>
+      <select id="title" name="title" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <option value="">Select your title</option>
+        <option value="Dr.">Dr.</option>
+        <option value="Prof.">Prof.</option>
+        <option value="Ms.">Ms.</option>
+        <option value="Mrs.">Mrs.</option>
+        <option value="Smt.">Smt.</option>
+        <option value="Shri.">Shri.</option>
+        <option value="Mr.">Mr.</option>
+      </select>
+    </div>
+  
+    <!-- Name Field -->
+    <div style="margin-bottom: 15px;">
+      <label for="name" style="font-weight: bold; color: #2c3e50;">Name <span style="color: red;">*</span></label><br>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your full name" />
+      <div class="error-message" id="nameError" style="color: red;"></div>
+    </div>
+  
+    <!-- Email Field -->
+    <div style="margin-bottom: 15px;">
+      <label for="email" style="font-weight: bold; color: #2c3e50;">Email Address <span style="color: red;">*</span></label><br>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your email address" />
+      <div class="error-message" id="emailError" style="color: red;"></div>
+    </div>
+  
+    <!-- Mobile Number Field -->
+    <div style="margin-bottom: 15px;">
+      <label for="mobile" style="font-weight: bold; color: #2c3e50;">Mobile Number (with country code) <span style="color: red;">*</span></label><br>
+      <input type="tel" id="mobile" name="mobile" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="+91 1234567890" />
+      <div class="error-message" id="mobileError" style="color: red;"></div>
+    </div>
+  
+    <!-- Address Field -->
+    <div style="margin-bottom: 15px;">
+      <label for="address" style="font-weight: bold; color: #2c3e50;">Full Address <span style="color: red;">*</span></label><br>
+      <input type="text" id="address" name="address" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your address" />
+      <div class="error-message" id="addressError" style="color: red;"></div>
+    </div>
+  
+    <!-- Organization Field -->
+    <div style="margin-bottom: 15px;">
+      <label for="organization" style="font-weight: bold; color: #2c3e50;">Organization <span style="color: red;">*</span></label><br>
+      <input type="text" id="organization" name="organization" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your organization name" />
+      <div class="error-message" id="organizationError" style="color: red;"></div>
+    </div>
+  
+    <!-- Designation Field -->
+    <div style="margin-bottom: 15px;">
+      <label for="designation" style="font-weight: bold; color: #2c3e50;">Designation <span style="color: red;">*</span></label><br>
+      <input type="text" id="designation" name="designation" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your designation" />
+      <div class="error-message" id="designationError" style="color: red;"></div>
+    </div>  
+
+      <!-- Registration Type -->
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+    <div style="margin-bottom: 15px;">
+      <label style="font-weight: bold; color: #2c3e50;">Select Registration Type <span style="color: red;">*</span></label>
+      <div style="margin-top: 10px;">
+        <input type="radio" id="myself" name="registrationType" value="Myself" required />
+        <label for="myself" style="color: #16a085;">Myself</label>
+      </div>
+      <div>
+        <input type="radio" id="team" name="registrationType" value="My team" required />
+        <label for="team" style="color: #16a085;">My Team</label>
+      </div>
+      <div class="error-message" id="registrationTypeError" style="color: red;"></div>
+    </div>
+  
+    <!-- Team Members Section (Hidden initially) -->
+    <div id="teamSection" style="display: none; margin-bottom: 15px;">
+      <label for="teamMembers" style="font-weight: bold; color: #2c3e50;">Name of Members <span style="color: red;">*</span></label><br>
+      <textarea id="teamMembers" name="teamMembers" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter team members' names"></textarea>
+      <div class="error-message" id="teamMembersError" style="color: red;"></div>
+  
+      <label for="teamIdProof" style="font-weight: bold; color: #2c3e50; margin-top: 10px;">Upload Team Members' ID Proofs <span style="color: red;">*</span></label><br>
+      <input type="file" id="teamIdProof" name="teamIdProof[]" accept=".pdf,.jpg,.png,.jpeg" multiple style="margin-top: 5px;" />
+      <div class="error-message" id="teamIdProofError" style="color: red;"></div>
+    </div>
+  
+    <!-- Event Selection -->
+    <div style="margin-bottom: 15px;">
+      <label style="font-weight: bold; color: #2c3e50;">Select Event <span style="color: red;">*</span></label>
+      <div style="margin-top: 10px;">
+        <input type="radio" id="offline" name="event" value="Offline" required />
+        <label for="offline" style="color: #16a085;">Offline</label>
+      </div>
+      <div>
+        <input type="radio" id="online" name="event" value="Online" required />
+        <label for="online" style="color: #16a085;">Online</label>
+      </div>
+      <div>
+        <input type="radio" id="both" name="event" value="Both" required />
+        <label for="both" style="color: #16a085;">Both</label>
+      </div>
+      <div class="error-message" id="eventError" style="color: red;"></div>
+    </div>
+  
+    <!-- Category Selection -->
+    <div style="margin-bottom: 15px;">
+      <label for="category" style="font-weight: bold; color: #2c3e50;">Select Category <span style="color: red;">*</span></label><br>
+      <select id="category" name="category" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
+        <option value="">Select a category</option>
+        <option value="IISD-CMI Member">IISD-CMI Member</option>
+        <option value="Student">Student</option>
+        <option value="NPO/CBO/NGO">NPO/CBO/NGO</option>
+        <option value="Researcher/Scholar/Academic">Researcher/Scholar/Academic</option>
+        <option value="Foreign National">Foreign National</option>
+        <option value="General">General (None of the above)</option>
+      </select>
+      <div class="error-message" id="categoryError" style="color: red;"></div>
+    </div>
+  </div>
+  <br>
+  
+
+      <!-- Net Zero Event Participation Form -->
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+    <hr />
+    <h3 style="color: #2c3e50; text-align: center; font-style: italic; font-weight: normal;">
+      Help Us Make the Summit a Net Zero Event
+    </h3>
+    <hr />
+    
+    <!-- City of Origin -->
+    <div class="form-section" style="margin-bottom: 15px;">
+      <label for="city" style="color: #2c3e50; font-weight: bold;">Where are you Coming From? <span style="color: red;">*</span></label>
+      <input type="text" id="city" name="city" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    
+    <!-- Travel Method -->
+    <div class="form-section" style="margin-bottom: 15px;">
+      <label style="color: #2c3e50; font-weight: bold;">How will you Travel to the Event? <span style="color: red;">*</span></label>
+      <div class="form-group" style="margin-top: 10px;">
+        <input type="radio" id="car" name="travel" value="car" />
+        <label for="car" style="color: #16a085;">Car</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="bus" name="travel" value="bus" />
+        <label for="bus" style="color: #16a085;">Bus</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="train" name="travel" value="train" />
+        <label for="train" style="color: #16a085;">Train</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="flight" name="travel" value="flight" />
+        <label for="flight" style="color: #16a085;">Flight</label>
+      </div>
+    </div>
+  
+    <!-- Transportation Type -->
+    <div class="form-section" style="margin-bottom: 15px;">
+      <label style="color: #2c3e50; font-weight: bold;">Type of Transportation?</label>
+      <div class="form-group" style="margin-top: 10px;">
+        <input type="radio" id="fuelBased" name="transportationType" value="fuelBased" />
+        <label for="fuelBased" style="color: #16a085;">Fuel-Based</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="electric" name="transportationType" value="electric" />
+        <label for="electric" style="color: #16a085;">Electric</label>
+      </div>
+    </div>
+  
+    <!-- Flight Options -->
+    <div class="form-section" style="margin-bottom: 15px;">
+      <label style="color: #2c3e50; font-weight: bold;">Flight Option</label>
+      <div class="form-group" style="margin-top: 10px;">
+        <input type="radio" id="economy" name="flightOption" value="economy" />
+        <label for="economy" style="color: #16a085;">Economy</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="business" name="flightOption" value="business" />
+        <label for="business" style="color: #16a085;">Business</label>
+      </div>
+    </div>
+  
+    <!-- Food Preferences -->
+    <div class="form-section" style="margin-bottom: 15px;">
+      <label style="color: #2c3e50; font-weight: bold;">What is your Food Preference? <span style="color: red;">*</span></label>
+      <div class="form-group" style="margin-top: 10px;">
+        <input type="radio" id="vegan" name="foodPreference" value="vegan" />
+        <label for="vegan" style="color: #16a085;">Vegan</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="vegetarian" name="foodPreference" value="vegetarian" />
+        <label for="vegetarian" style="color: #16a085;">Vegetarian</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="nonVegetarian" name="foodPreference" value="nonVegetarian" />
+        <label for="nonVegetarian" style="color: #16a085;">Non-Vegetarian</label>
+      </div>
+    </div>
+  </div>
+  
+
+      <!-- Payment Details Section -->
+      <div class="event-details">
+        <h2>Amount Details</h2>
+      
+        <h3>1. Online Participation (27 Nov 2024)</h3>
+        <p>Rs 300 for Indian Nationals, $12 for Foreign Nationals</p>
+      
+        <h3>2. Offline Participation (28 Nov 2024)</h3>
+        <p>You will get free access to the online event as well.</p>
+      
+        <h4>Category of Offline Prices:</h4>
+        <ul>
+          <li>Rs 1000 for students</li>
+          <li>Rs 2500 for academics, professors, scholars, and PhD holders</li>
+          <li>Rs 2500 for CBOs and NPOs</li>
+          <li>Rs 5000 for general attendees (not included in previous categories)</li>
+          <li>$135 for Foreign Nationals, irrespective of the category</li>
+        </ul>
+      
+        <p><strong>IISD-CMI Members:</strong> Free access to both the online and offline events.</p>
+      
+        <h4>Note:</h4>
+        <ul>
+          <li>For groups of 10 or more, a 5% discount will be applied to the total price.</li>
+          <li>Please upload your category proof.</li>
+          <li>Please upload your IISD-CMI Membership Certificate to get free access to the Summit.</li>
+        </ul>
+      </div>
+<div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 8px; max-width: 600px; margin: auto;">
+    <hr />
+    <h3 style="color: #2c3e50; text-align: center; font-style: italic; font-weight: normal;">
+      Banking and Payment Information
+    </h3>
+    <hr />
+    
+    <p style="color: #2c3e50; font-weight: bold; text-align: center; margin-top: 20px;">
+      BANK DETAILS
+    </p>
+    
+    <p style="text-align: center;">
+      Calculate the amount of fee you should pay using the calculator below:
+    </p>
+        <!-- Calculator Button -->
+        <button type="button" id="openCalculator">Open Fee Calculator</button>
+        
+        <!-- Calculator Modal -->
+        <div id="calculatorModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="calculator">
+                  <h4 style="color : darkblue">Event Registration Calculator</h4>
+          
+                  <section id="nationalitySection">
+                      <label for="nationality">Nationality:</label>
+                      <select id="nationality" onchange="handleNationalityChange()">
+                          <option value="">Select</option>
+                          <option value="indian">Indian</option>
+                          <option value="foreign">Foreign</option>
+                      </select>
+                  </section>
+          
+                  <section id="registrationType">
+                      <label for="regType">Registering for:</label>
+                      <select id="regType" onchange="handleRegistrationTypeChange()">
+                          <option value="">Select</option>
+                          <option value="self">Less than 10</option>
+                          <option value="group">10 or more</option>
+                      </select>
+                  </section>
+          
+                  <section id="numberOfPeople">
+                      <label for="peopleCount">Number of people:</label>
+                      <input type="number" id="peopleCount" min="1" step="1" placeholder="Enter number of people">
+                  </section>
+          
+                  <section id="categorySection">
+                      <label for="categorySelect">Category:</label>
+                      <select id="categorySelect">
+                          <option value="">Select</option>
+                          <option value="student">Student</option>
+                          <option value="academic">Academic/Professor/Scholars/PhD Holders</option>
+                          <option value="cbo_npo">CBOs/NPOs</option>
+                          <option value="general">General Attendees</option>
+                      </select>
+                  </section>
+          
+                  <section id="eventDay">
+                      <label for="eventDaySelect">Event Day:</label>
+                      <select id="eventDaySelect" onchange="handleEventDayChange()">
+                          <option value="">Select</option>
+                          <option value="online">27 Nov 2024 - Online</option>
+                          <option value="offline">28 Nov 2024 - Offline</option>
+                          <option value="both">Both</option>
+                      </select>
+                  </section>
+          
+                  <button onclick="calculateTotal()">Calculate Total</button>
+                  <!-- <button class="back-button" onclick="goHome()">Back to Home</button> -->
+          
+                  <div class="result" id="result"></div>
+              
+                <!-- <div id="calculatorContent">
+                    <h3>Event Fee Calculator</h3>
+                    <select id="nationality">
+                        <option value="">Select Nationality</option>
+                        <option value="indian">Indian</option>
+                        <option value="foreign">Foreign</option>
+                    </select>
+                    <select id="registrationType">
+                        <option value="">Select Registration Type</option>
+                        <option value="individual">Individual</option>
+                        <option value="group">Group (10 or more)</option>
+                    </select>
+                    <input type="number" id="peopleCount" placeholder="Number of People" min="1">
+                    <select id="category">
+                        <option value="">Select Category</option>
+                        <option value="student">Student</option>
+                        <option value="academic">Academic</option>
+                        <option value="npo">NPO/CBO</option>
+                        <option value="general">General</option>
+                    </select>
+                    <select id="eventDay">
+                        <option value="">Select Event Day</option>
+                        <option value="online">27 Nov 2024 - Online</option>
+                        <option value="offline">28 Nov 2024 - Offline</option>
+                        <option value="both">Both Days</option>
+                    </select>
+                    <button onclick="calculateFee()">Calculate Fee</button>
+                    <div id="result"></div> -->
+                </div>
+            </div>
+        </div>
+        <br>
+    <!-- Bank Details -->
+    <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ccc;">
+      <p><strong>In Favour of:</strong> Indian Institute of Sustainable Development</p>
+      <p><strong>Bank Name:</strong> State Bank of India</p>
+      <p><strong>Branch:</strong> West Vinod Nagar</p>
+      <p><strong>Account Number:</strong> 62175298062</p>
+      <p><strong>IFSC Code:</strong> SBIN0021310</p>
+    </div>
+  
+    <!-- UPI and QR Code Payment Options -->
+    <div style="margin-top: 20px;">
+      <h4 style="color: #2c3e50; text-align: center;">Other Payment Methods</h4>
+      <p style="text-align: center;"><strong>UPI ID:</strong> 7011510990@SBI</p>
+      <div style="text-align: center;">
+        <p>Scan the QR code below to make a payment:</p>
+        <img src="QRCode.jpeg" alt="QR Code" style="width: 200px; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
+      </div>
+    </div>
+  </div>
+  <!-- Proof of Category Upload -->
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 8px; max-width: 600px; margin: auto;">
+<div style="margin-bottom: 15px;">
+    <label for="categoryProof" style="font-weight: bold; color: #2c3e50;">
+      Please Upload Proof of Category <span style="color: red;">*</span>
+    </label><br>
+    <input
+      type="file"
+      id="categoryProof"
+      name="categoryProof"
+      accept=".pdf,.jpg,.png,.jpeg"
+      required
+      style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+    />
+    <div class="error-message" id="categoryProofError" style="color: red;"></div>
+  </div>
+  
+  <!-- Proof of Payment Upload -->
+  <div style="margin-bottom: 15px;">
+    <label for="PaymentProof" style="font-weight: bold; color: #2c3e50;">
+      Please Upload Proof of Payment <span style="color: red;">*</span>
+    </label><br>
+    <input
+      type="file"
+      id="PaymentProof"
+      name="PaymentProof"
+      accept=".pdf,.jpg,.png,.jpeg"
+      required
+      style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+    />
+    <div class="error-message" id="paymentProofError" style="color: red;"></div>
+  </div>
+  
+  <!-- Consent Checkbox -->
+  <div style="margin-bottom: 15px;">
+    <label style="font-weight: bold; color: #2c3e50;">
+      <input type="checkbox" name="consent" id="consent" required /> I consent to
+      the terms and conditions <span style="color: red;">*</span>
+    </label>
+    <div class="error-message" id="consentError" style="color: red;"></div>
+  </div>
+
+        <!-- Submit Button -->
+        <button style="background-color: darkred; color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;" type="button" onclick="submitForm()">Submit</button>
+       
+    </form>
+
+    <!-- Status Message Div -->
+    <div id="statusMessage"></div>
+
+    <script>
+        // Calculator Modal
+        var modal = document.getElementById("calculatorModal");
+        var btn = document.getElementById("openCalculator");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+//
+        function handleNationalityChange() {
+            const nationality = document.getElementById('nationality').value;
+            const currencySymbol = nationality === 'foreign' ? '$' : 'Rs ';
+            handleEventDayChange();
+        }
+
+        function handleRegistrationTypeChange() {
+            document.getElementById('peopleCount').value = '';
+        }
+
+        function handleEventDayChange() {
+            const eventDay = document.getElementById('eventDaySelect').value;
+            const categorySection = document.getElementById('categorySection');
+            categorySection.classList.toggle('hidden', eventDay === 'online');
+        }
+
+        function calculateTotal() {
+            const nationality = document.getElementById('nationality').value;
+            const peopleCount = parseInt(document.getElementById('peopleCount').value) || 1;
+            const eventDay = document.getElementById('eventDaySelect').value;
+            const category = document.getElementById('categorySelect').value;
+
+            let originalPrice = 0;
+            let discount = 0;
+            let currencySymbol = nationality === 'foreign' ? '$' : 'Rs ';
+
+            if (peopleCount >= 1 && eventDay) {
+                if (eventDay === 'online') {
+                    originalPrice = peopleCount * (nationality === 'foreign' ? 12 : 300);
+                } else if (eventDay === 'offline' || eventDay === 'both') {
+                    if (nationality === 'foreign') {
+                        originalPrice = peopleCount * 135;
+                    } else {
+                        if (category === 'student') {
+                            originalPrice = peopleCount * 1000;
+                        } else if (category === 'academic') {
+                            originalPrice = peopleCount * 2500;
+                        } else if (category === 'cbo_npo') {
+                            originalPrice = peopleCount * 2500;
+                        } else if (category === 'general') {
+                            originalPrice = peopleCount * 5000;
+                        }
+                    }
+                }
+
+                if (peopleCount >= 10) {
+                    discount = originalPrice * 0.05;
+                    originalPrice -= discount;
+                }
+            }
+
+            document.getElementById('result').innerHTML = 
+                '<p>Original Price: ' + currencySymbol + (originalPrice + discount).toFixed(2) + '</p>' +
+                '<p>Total Price (Original Price minus Discount): ' + currencySymbol + originalPrice.toFixed(2) + '</p>' +
+                '<p>Discount Applied: ' + currencySymbol + discount.toFixed(2) + '</p>';
+        }
+
+        // // Fee Calculator
+        // function calculateFee() {
+        //     var nationality = document.getElementById("nationality").value;
+        //     var registrationType = document.getElementById("registrationType").value;
+        //     var peopleCount = parseInt(document.getElementById("peopleCount").value) || 0;
+        //     var category = document.getElementById("category").value;
+        //     var eventDay = document.getElementById("eventDay").value;
+
+        //     var fee = 0;
+        //     var currencySymbol = nationality === "foreign" ? "$" : "₹";
+
+        //     if (nationality === "indian") {
+        //         if (eventDay === "online") {
+        //             fee = 300;
+        //         } else if (eventDay === "offline" || eventDay === "both") {
+        //             switch (category) {
+        //                 case "student": fee = 1000; break;
+        //                 case "academic": fee = 2500; break;
+        //                 case "npo": fee = 2500; break;
+        //                 case "general": fee = 5000; break;
+        //             }
+        //             if (eventDay === "both") {
+        //                 fee += 300; // Add online day fee
+        //             }
+        //         }
+        //     } else if (nationality === "foreign") {
+        //         fee = eventDay === "online" ? 12 : 135;
+        //         if (eventDay === "both") {
+        //             fee = 147; // $135 + $12
+        //         }
+        //     }
+
+        //     var totalFee = fee * peopleCount;
+
+        //     if (registrationType === "group" && peopleCount >= 10) {
+        //         totalFee *= 0.95; // 5% discount for groups of 10 or more
+        //     }
+
+        //     document.getElementById("result").innerHTML = `Total Fee: ${currencySymbol}${totalFee.toFixed(2)}`;
+        // }
+
+        // Form Validation
+        function validateForm() {
+            let isValid = true;
+            const errorMessages = document.getElementsByClassName("error-message");
+            for (let errorMessage of errorMessages) {
+                errorMessage.textContent = "";
+            }
+
+            // Validate required fields
+            const requiredFields = ["name", "email", "mobile", "address", "organization", "designation"];
+            for (let field of requiredFields) {
+                if (!document.getElementById(field).value) {
+                    document.getElementById(field + "Error").textContent = "This field is required.";
+                    isValid = false;
+                }
+            }
+
+            // Validate radio buttons
+            if (!document.querySelector('input[name="registrationType"]:checked')) {
+                document.getElementById("registrationTypeError").textContent = "Please select a registration type.";
+                isValid = false;
+            }
+
+            if (!document.querySelector('input[name="event"]:checked')) {
+                document.getElementById("eventError").textContent = "Please select an event type.";
+                isValid = false;
+            }
+
+            // Validate select
+            if (!document.getElementById("category").value) {
+                document.getElementById("categoryError").textContent = "Please select a category.";
+                isValid = false;
+            }
+
+            // Validate file uploads
+            if (!document.getElementById("categoryProof").files.length) {
+                document.getElementById("categoryProofError").textContent = "Please upload a proof of category.";
+                isValid = false;
+            }
+
+            if (!document.getElementById("PaymentProof").files.length) {
+                document.getElementById("paymentProofError").textContent = "Please upload a proof of payment.";
+                isValid = false;
+            }
+
+            // Validate consent
+            if (!document.getElementById("consent").checked) {
+                document.getElementById("consentError").textContent = "You must agree to the terms and conditions.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        // Form Submission
+        function submitForm() {
+            if (!validateForm()) {
+                return;
+            }
+
+            var form = document.getElementById("registrationForm");
+            var formData = new FormData(form);
+            var statusMessage = document.getElementById("statusMessage");
+
+            statusMessage.innerHTML = '<p style="color: blue;">Submitting form, please wait...</p>';
+            statusMessage.className = "visible";
+
+            // Handle file uploads
+            var categoryProofFile = document.getElementById("categoryProof").files[0];
+            var paymentProofFile = document.getElementById("PaymentProof").files[0];
+
+            if (categoryProofFile) {
+                formData.append("categoryProofName", categoryProofFile.name);
+                formData.append("categoryProofMimeType", categoryProofFile.type);
+            }
+
+            if (paymentProofFile) {
+                formData.append("paymentProofName", paymentProofFile.name);
+                formData.append("paymentProofMimeType", paymentProofFile.type);
+            }
+
+            // Convert file contents to base64
+            var filePromises = [];
+
+            if (categoryProofFile) {
+                filePromises.push(getBase64(categoryProofFile).then(function(base64File) {
+                    formData.set("categoryProof", base64File);
+                }));
+            }
+
+            if (paymentProofFile) {
+                filePromises.push(getBase64(paymentProofFile).then(function(base64File) {
+                    formData.set("paymentProof", base64File);
+                }));
+            }
+
+            Promise.all(filePromises).then(function() {
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbyXBTNyfLX_cdbqff5EOCrRdCc0gwGE38baDsfy7SGAzTbupBTaK1TJxmu187rZQqya/exec",
+                    method: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        statusMessage.innerHTML = '<p style="color: green;">Form submitted successfully!</p>';
+                        statusMessage.className = "visible success";
+                        clearForm();
+                    },
+                    error: function(xhr, status, error) {
+                        statusMessage.innerHTML = '<p style="color: red;">Error submitting form: ' + error + '</p>';
+                        statusMessage.className = "visible error";
+                    }
+                });
+            });
+        }
+
+        function getBase64(file) {
+            return new Promise(function(resolve, reject) {
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function() {
+                    resolve(reader.result.split(',')[1]);
+                };
+                reader.onerror = function(error) {
+                    reject(error);
+                };
+            });
+        }
+
+        function clearForm() {
+            document.getElementById("registrationForm").reset();
+            document.getElementById("teamSection").style.display = "none";
+            const errorMessages = document.getElementsByClassName("error-message");
+            for (let errorMessage of errorMessages) {
+                errorMessage.textContent = "";
+            }
+        }
+
+        // Real-time validation
+        const inputs = document.querySelectorAll("input[required], select[required], textarea[required]");
+        inputs.forEach((input) => {
+            input.addEventListener("blur", function() {
+                if (!this.value) {
+                    document.getElementById(this.id + "Error").textContent = "This field is required.";
+                } else {
+                    document.getElementById(this.id + "Error").textContent = "";
+                }
+            });
+        });
+
+        // Special handling for radio buttons
+        const radioGroups = ["registrationType", "event"];
+        radioGroups.forEach((group) => {
+            const radios = document.querySelectorAll(`input[name="${group}"]`);
+            radios.forEach((radio) => {
+                radio.addEventListener("change", function() {
+                    document.getElementById(group + "Error").textContent = "";
+                });
+            });
+        });
+
+        // Special handling for file inputs
+        const fileInputs = ["categoryProof", "PaymentProof"];
+        fileInputs.forEach((input) => {
+            document.getElementById(input).addEventListener("change", function() {
+                if (this.files.length > 0) {
+                    document.getElementById(input + "Error").textContent = "";
+                }
+            });
+        });
+
+        // Handle consent checkbox
+        document.getElementById("consent").addEventListener("change", function() {
+            if (this.checked) {
+                document.getElementById("consentError").textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>
