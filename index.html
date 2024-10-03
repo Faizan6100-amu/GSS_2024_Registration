@@ -6,7 +6,10 @@
     <title>Global Sustainability Summit 2024 Registration Form</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-       :root {
+      
+
+
+      :root {
   --primary-color: #4caf50;
   --secondary-color: #45a049;
   --background-color: #f0f8ff;
@@ -16,11 +19,11 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  line-height: 1.0;
   color: var(--text-color);
   background-color: var(--background-color);
   padding: 20px;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
   transition: all 0.3s ease;
 }
@@ -28,7 +31,7 @@ body {
 /* Logo */
 .logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .logo img {
@@ -60,14 +63,37 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: black;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
 }
 
 /* Event Details */
 .event-details {
   font-family: Arial, sans-serif;
   line-height: 1.2;
-  margin: 20px;
+  margin: 20px 0;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -107,6 +133,18 @@ label {
   border: 1px solid #888;
   width: 80%;
   max-width: 500px;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .close {
@@ -115,13 +153,13 @@ label {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* Calculator */
@@ -134,13 +172,22 @@ label {
 #calculatorContent select,
 #calculatorContent input,
 #calculatorContent button {
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#calculatorContent button:hover {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .error-message {
-  color: red;
+  color: var(--error-color);
   font-size: 14px;
+  margin-top: 5px;
 }
 
 .calculator input,
@@ -174,6 +221,22 @@ label {
   }
 }
 
+/* Submit Button */
+button[type="button"] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: var(--secondary-color);
+}
+
 /* Media query for small screens */
 @media (max-width: 768px) {
   body {
@@ -181,7 +244,7 @@ label {
   }
 
   form {
-    width: 95%;
+    padding: 20px;
   }
   
   h2 {
@@ -193,16 +256,22 @@ label {
   }
 
   label, input, select, textarea, button {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   button[type="submit"] {
-    font-size: 1rem;
+    font-size: 16px;
+    padding: 10px 15px;
   }
 
   .modal-content {
     width: 90%;
     max-width: 400px;
+    margin: 20% auto;
+  }
+
+  .event-details {
+    padding: 15px;
   }
 }
 
@@ -213,12 +282,11 @@ label {
   }
 
   form {
-    width: 100%;
     padding: 15px;
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .logo img {
@@ -226,16 +294,22 @@ label {
   }
 
   label, input, select, textarea, button {
-    font-size: 0.9rem;
+    font-size: 13px;
   }
 
   button[type="submit"] {
-    font-size: 0.9rem;
+    font-size: 14px;
+    padding: 8px 12px;
   }
 
   .modal-content {
     width: 95%;
     max-width: 350px;
+    margin: 25% auto;
+  }
+
+  .event-details {
+    padding: 10px;
   }
 
   /* Calculator adjustments for small screens */
@@ -251,6 +325,23 @@ label {
   }
 }
 
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
     </style>
 </head>
 <body><div class="logo">
@@ -259,17 +350,69 @@ label {
       alt="Global Sustainability Summit Logo"
     />
   </div>
-    <h2>Global Sustainability Summit 2024 Registration Form</h2>
+    <h2>The Global Sustainability Summit (GSS) 2024<br><strong style="color:darkred;">Registration Form</strong></h2>
+    <!-- About Section -->
+<section id="about" style="padding: 10px 0;">
+  <div class="container" style="font-family: Arial, sans-serif;  margin: auto; padding: 10px; border-radius: 8px; background-color: lavender; text-align: justify;">
+    <p style="color: #34495e; line-height: 1.8;">
+      <strong>The Global Sustainability Summit (GSS) 2024 </strong>is an Annual Flagship <strong>Global Program of IISD-CMI</strong> to showcase <strong>India's Global Leadership in the field of Sustainability and Decarbonization</strong>, Since both Institutes have completed over 16 years of Dedicated Services to the Nation and the Planet. <strong>IISD-CMI are Proud National Public Policy think tanks</strong> and <strong>Scientific Research Organizations</strong> based in New Delhi. They work with <strong>the Central and State Governments in India</strong>, UN Member States, International Scientific Laboratories, a network of Credible Universities, leading Diplomats and Policymakers, Industry and Business Leaders, Academicians, Women and Youth, Global thought Leaders, and Prolific Thinkers around the World.
+    </p>
+    <button id="knowMoreBtn" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Know More</button>
+
+    <!-- Hidden Section (Initially Hidden) -->
+    <div id="knowMoreContent" style="display: none; margin-top: 20px; color: #34495e; line-height: 1.8;">
+      <p>Follow Us On LinkedIn:</p>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/company/iisdindia/" target="_blank" style="color: #180f90;">
+            Indian Institute of Sustainable Development (IISD)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/carbon-minus-india-new-delhi/" target="_blank" style="color: #180f90;">
+            Carbon Minus India (CMI)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/carbon-management-school/" target="_blank" style="color: #180f90;">
+            Carbon Management School (CMS)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/school-of-business-sustainability/" target="_blank" style="color: #180f90;">
+            School of Business Sustainability (SBS)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Show/Hide Know More Content
+  document.getElementById('knowMoreBtn').addEventListener('click', function() {
+    var content = document.getElementById('knowMoreContent');
+    if (content.style.display === 'none') {
+      content.style.display = 'block';
+      this.innerText = 'Show Less';
+    } else {
+      content.style.display = 'none';
+      this.innerText = 'Know More';
+    }
+  });
+</script>
+
     
     <form
       id="registrationForm"
       method="post"
-      action="https://script.google.com/macros/s/AKfycbwOkWyp_SQyVV4N380qt_17Xx5wGsEErETkSsv6YJ-ZiKs48wKyRsbpgILbPyqyIzpM/exec"
+      action="https://script.google.com/macros/s/AKfycbxwBouLP3IH5K664EsMQ_jnmic_YE87rHneZ_63h0EwaLE3O3TZ2-hwkir3XgKvRVvn/exec"
+      style="background-color: lavenderblush;"
     >
     <!-- Title Field (Optional) -->
 <div style="font-family: Arial, sans-serif;  margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
     <div style="margin-bottom: 15px;">
-      <label for="title" style="font-weight: bold; color: #2c3e50;">Title</label><br>
+      <label for="title" style="font-weight: bold; color: #2c3e50;">Title <span style="color: red;">*</span></label><br>
       <select id="title" name="title" style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
         <option value="">Select your title</option>
         <option value="Dr.">Dr.</option>
@@ -279,6 +422,7 @@ label {
         <option value="Smt.">Smt.</option>
         <option value="Shri.">Shri.</option>
         <option value="Mr.">Mr.</option>
+        <option value="Mr.">Other</option>
       </select>
     </div>
   
@@ -297,22 +441,63 @@ label {
     </div>
   
     <!-- Mobile Number Field -->
-    <div style="margin-bottom: 15px;">
-      <label for="mobile" style="font-weight: bold; color: #2c3e50;">Mobile Number (with country code) <span style="color: red;">*</span></label><br>
-      <input type="tel" id="mobile" name="mobile" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="+91 1234567890" />
-      <div class="error-message" id="mobileError" style="color: red;"></div>
-    </div>
+<div style="margin-bottom: 15px;">
+  <label for="mobile" style="font-weight: bold; color: #2c3e50;">Mobile Number (with country code) <span style="color: red;">*</span></label><br>
   
-    <!-- Address Field -->
-    <div style="margin-bottom: 15px;">
-      <label for="address" style="font-weight: bold; color: #2c3e50;">Full Address <span style="color: red;">*</span></label><br>
-      <input type="text" id="address" name="address" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your address" />
-      <div class="error-message" id="addressError" style="color: red;"></div>
-    </div>
+  <div style="display: flex; align-items: center;">
+    <!-- Country Code Dropdown -->
+    <select id="countryCode" name="countryCode" required style="width: 30%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-right: 10px;">
+      <option value="">Select Country Code</option>
+      <option value="+1">+1 (USA)</option>
+      <option value="+91">+91 (India)</option>
+      <option value="+44">+44 (UK)</option>
+      <option value="+61">+61 (Australia)</option>
+      <option value="+81">+81 (Japan)</option>
+      <option value="+49">+49 (Germany)</option>
+      <option value="+33">+33 (France)</option>
+      <option value="+39">+39 (Italy)</option>
+      <option value="+86">+86 (China)</option>
+      <option value="+7">+7 (Russia)</option>
+      <option value="+55">+55 (Brazil)</option>
+      <option value="+34">+34 (Spain)</option>
+      <option value="+27">+27 (South Africa)</option>
+      <option value="+82">+82 (South Korea)</option>
+      <option value="+62">+62 (Indonesia)</option>
+      <option value="+60">+60 (Malaysia)</option>
+      <option value="+64">+64 (New Zealand)</option>
+      <option value="+971">+971 (UAE)</option>
+      <option value="+966">+966 (Saudi Arabia)</option>
+      <option value="+92">+92 (Pakistan)</option>
+      <option value="+880">+880 (Bangladesh)</option>
+      <option value="+94">+94 (Sri Lanka)</option>
+      <option value="+41">+41 (Switzerland)</option>
+      <option value="+46">+46 (Sweden)</option>
+      <option value="+47">+47 (Norway)</option>
+      <option value="+48">+48 (Poland)</option>
+      <option value="+351">+351 (Portugal)</option>
+      <option value="+31">+31 (Netherlands)</option>
+      <option value="+32">+32 (Belgium)</option>
+      <option value="+52">+52 (Mexico)</option>
+      <option value="+53">+53 (Cuba)</option>
+      <option value="+63">+63 (Philippines)</option>
+      <option value="+65">+65 (Singapore)</option>
+      <option value="+64">+64 (New Zealand)</option>
+      <option value="+998">+998 (Uzbekistan)</option>
+      <option value="+84">+84 (Vietnam)</option>
+      <!-- Add more country codes if necessary -->
+    </select>
+
+    <!-- Phone Number Input -->
+    <input type="tel" id="mobile" name="mobile" required style="width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="1234567890" />
+  </div>
+
+  <div class="error-message" id="mobileError" style="color: red;"></div>
+</div>
+
   
     <!-- Organization Field -->
     <div style="margin-bottom: 15px;">
-      <label for="organization" style="font-weight: bold; color: #2c3e50;">Organization <span style="color: red;">*</span></label><br>
+      <label for="organization" style="font-weight: bold; color: #2c3e50;">Afiliated Organization / Freelancer <span style="color: red;">*</span></label><br>
       <input type="text" id="organization" name="organization" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your organization name" />
       <div class="error-message" id="organizationError" style="color: red;"></div>
     </div>
@@ -327,7 +512,7 @@ label {
     <div style="margin-bottom: 15px;">
     <label for="idProof" style="font-weight: bold; color: #2c3e50;">
       Upload your ID Proof (Aadhar/Pan Card/ Passport) <span style="color: red;">*</span>
-    </label><br>
+    </label>
     <input
       type="file"
       id="idProof"
@@ -335,97 +520,34 @@ label {
       accept=".pdf,.jpg,.png,.jpeg"
       required
       style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
-    />
+    /><br>
+    <small style="color: #2c3e50;">(Your ID proof should include both sides of the document)</small>
     <div class="error-message" id="idProofError" style="color: red;"></div>
   </div>
-
-
- <!-- Registration Type -->
-<div style="font-family: Arial, sans-serif;  margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+  <!-- Address Field -->
   <div style="margin-bottom: 15px;">
-      <label style="font-weight: bold; color: #2c3e50;">Select Registration Type <span style="color: red;">*</span></label>
-      <div style="margin-top: 10px;">
-          <input type="radio" id="myself" name="registrationType" value="Myself" required onclick="toggleTeamSection()" />
-          <label for="myself" style="color: #16a085;">Myself</label>
-      </div>
-      <div>
-          <input type="radio" id="team" name="registrationType" value="My team" required onclick="toggleTeamSection()" />
-          <label for="team" style="color: #16a085;">My Team</label>
-      </div>
-      <div class="error-message" id="registrationTypeError" style="color: red;"></div>
+    <label for="address" style="font-weight: bold; color: #2c3e50;">Full Address <span style="color: red;">*</span></label><br>
+    <input type="text" id="address" name="address" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your address" />
+    <div class="error-message" id="addressError" style="color: red;"></div>
   </div>
+<!--  -->
+  <!--  -->
 
-  <!-- Team Members Section (Hidden initially) -->
-  <div id="teamSection" style="display: none; margin-bottom: 15px;">
-      <label for="teamMembers" style="font-weight: bold; color: #2c3e50;">Name of Members <span style="color: red;">*</span></label><br>
-      <textarea id="teamMembers" name="teamMembers" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter team members' names"></textarea>
-      <div class="error-message" id="teamMembersError" style="color: red;"></div>
-
-      <div style="margin-bottom: 15px;">
-        <label for="teamidProof" style="font-weight: bold; color: #2c3e50;">
-          Upload Team Members' ID Proofs<span style="color: red;">*</span>
-        </label><br>
-        <input
-          type="file"
-          id="teamidProof"
-          name="teamidProof"
-          accept=".pdf,.jpg,.png,.jpeg"
-          required
-          style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
-        />
-        <div class="error-message" id="teamidProofError" style="color: red;"></div>
-      </div>
-  </div> 
-  
-    <!-- Event Selection -->
-    <div style="margin-bottom: 15px;">
-      <label style="font-weight: bold; color: #2c3e50;">Select Event <span style="color: red;">*</span></label>
-      <div style="margin-top: 10px;">
-        <input type="radio" id="offline" name="event" value="Offline" required />
-        <label for="offline" style="color: #16a085;">Offline</label>
-      </div>
-      <div>
-        <input type="radio" id="online" name="event" value="Online" required />
-        <label for="online" style="color: #16a085;">Online</label>
-      </div>
-      <div>
-        <input type="radio" id="both" name="event" value="Both" required />
-        <label for="both" style="color: #16a085;">Both</label>
-      </div>
-      <div class="error-message" id="eventError" style="color: red;"></div>
-    </div>
-  
-    <!-- Category Selection -->
-    <div style="margin-bottom: 15px;">
-      <label for="category" style="font-weight: bold; color: #2c3e50;">Select Category <span style="color: red;">*</span></label><br>
-      <select id="category" name="category" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
-        <option value="">Select a category</option>
-        <option value="IISD-CMI Member">IISD-CMI Member</option>
-        <option value="Student">Student</option>
-        <option value="NPO/CBO/NGO">NPO/CBO/NGO</option>
-        <option value="Researcher/Scholar/Academic">Researcher/Scholar/Academic</option>
-        <option value="Foreign National">Foreign National</option>
-        <option value="General">General (None of the above)</option>
-      </select>
-      <div class="error-message" id="categoryError" style="color: red;"></div>
-    </div>
-  </div>
-  <br>
   
 
       <!-- Net Zero Event Participation Form -->
 <div style="font-family: Arial, sans-serif; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
-    <hr />
-    <h3 style="color: #2c3e50; text-align: center; font-style: italic; font-weight: normal;">
-      Help Us Make the Summit a Net Zero Event
+    <h3 style="color: darkblue; text-align: center; font-style: italic; font-weight:600;">
+      "Help Us Make the Summit a Carbon Neutral Event"
     </h3>
-    <hr />
+    <!-- <hr /> -->
     
     <!-- City of Origin -->
     <div class="form-section" style="margin-bottom: 15px;">
-      <label for="city" style="color: #2c3e50; font-weight: bold;">Where are you Coming From? <span style="color: red;">*</span></label>
+      <label for="city" style="color: #2c3e50; font-weight: bold;">Please specify your starting location for travel to the event venue <span style="color: red;">*</span></label>
       <input type="text" id="city" name="city" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
     </div>
+
     
     <!-- Travel Method -->
     <div class="form-section" style="margin-bottom: 15px;">
@@ -446,6 +568,14 @@ label {
         <input type="radio" id="flight" name="travel" value="flight" />
         <label for="flight" style="color: #16a085;">Flight</label>
       </div>
+      <div class="form-group">
+        <input type="radio" id="flight" name="travel" value="flight" />
+        <label for="flight" style="color: #16a085;">Metro Rail</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" id="flight" name="travel" value="flight" />
+        <label for="flight" style="color: #16a085;">Two-Wheeler</label>
+      </div>
     </div>
   
     <!-- Transportation Type -->
@@ -453,17 +583,21 @@ label {
       <label style="color: #2c3e50; font-weight: bold;">Type of Transportation?</label>
       <div class="form-group" style="margin-top: 10px;">
         <input type="radio" id="fuelBased" name="transportationType" value="fuelBased" />
-        <label for="fuelBased" style="color: #16a085;">Fuel-Based</label>
+        <label for="fuelBased" style="color: #16a085;">Petrol/Diesel-Based</label>
       </div>
       <div class="form-group">
         <input type="radio" id="electric" name="transportationType" value="electric" />
-        <label for="electric" style="color: #16a085;">Electric</label>
+        <label for="electric" style="color: #16a085;">Electric/Hybird/CNG</label>
       </div>
     </div>
   
     <!-- Flight Options -->
     <div class="form-section" style="margin-bottom: 15px;">
-      <label style="color: #2c3e50; font-weight: bold;">Flight Option</label>
+      <label style="color: #2c3e50; font-weight: bold;">Flight Option?</label>
+      <div class="form-group" style="margin-top: 10px;">
+        <input type="radio" id="economy" name="flightOption" value="economy" />
+        <label for="economy" style="color: #16a085;">First Class</label>
+      </div>
       <div class="form-group" style="margin-top: 10px;">
         <input type="radio" id="economy" name="flightOption" value="economy" />
         <label for="economy" style="color: #16a085;">Economy</label>
@@ -491,19 +625,19 @@ label {
       </div>
     </div>
   </div>
-  <div class="event-details">
-        <h3 style="text-align: center;"><i>Amount Details</i></h3>
+  <div class="event-details" style="font-family: Arial, sans-serif; margin: auto; padding: 15px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+        <h3 style="text-align: center; color: darkred; font-size: large;"><i><u>Registration fee structure</u></i></h3>
+        <hr>
+        <h4 style="color: darkblue;">1. Online Participation (27 Nov 2024)</h4>
+        <p><strong>Rs 300</strong> for Indian Nationals, <strong>$12</strong> for Foreign Nationals</p>
       
-        <h4>1. Online Participation (27 Nov 2024)</h4>
-        <p>Rs 300 for Indian Nationals, $12 for Foreign Nationals</p>
-      
-        <h4>2. Offline Participation (28 Nov 2024)</h4>
+        <h4 style="color: darkblue;">2. Offline Participation (28 Nov 2024)</h4>
         <p>You will get free access to the online event as well.</p>
       
-        <h4>Category of Offline Prices:</h4>
+        <h4 style="color: darkblue;">Category of Offline Prices:</h4>
         <ul>
-          <li>Rs 1000 for students</li>
-          <li>Rs 2500 for academics, professors, scholars, and PhD holders</li>
+          <li>Rs 1000 for students, Phd scholars</li>
+          <li>Rs 2500 for academics, professors, and PhD holders</li>
           <li>Rs 2500 for CBOs and NPOs</li>
           <li>Rs 5000 for general attendees (not included in previous categories)</li>
           <li>$135 for Foreign Nationals, irrespective of the category</li>
@@ -511,21 +645,111 @@ label {
       
         <p><strong>IISD-CMI Members:</strong> Free access to both the online and offline events.</p>
       
-        <h4>Note:</h4>
+        <h4 style="color: darkblue;">Note:</h4>
         <ul>
           <li>For groups of 10 or more, a 5% discount will be applied to the total price.</li>
           <li>Please upload your category proof.</li>
-          <li>Please upload your IISD-CMI Membership Certificate to get free access to the Summit.</li>
+          <li style="color: darkblue">Please upload your IISD-CMI Membership Certificate to get free access to the Summit in place of "Upload Payment Proof"</li>
         </ul>
     </div>
-    <h3 style="color: #2c3e50; text-align: center; font-style: italic; font-weight: normal;">
+      <!-- Registration Type -->
+<div style="font-family: Arial, sans-serif;  margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+  <div style="margin-bottom: 15px;">
+      <label style="font-weight: bold; color: #2c3e50;">Select Registration Type <span style="color: red;">*</span></label>
+      <div style="margin-top: 10px;">
+          <input type="radio" id="myself" name="registrationType" value="Myself" required onclick="toggleTeamSection()" />
+          <label for="myself" style="color: #16a085;">Myself</label>
+      </div>
+      <div>
+          <input type="radio" id="team" name="registrationType" value="My team" required onclick="toggleTeamSection()" />
+          <label for="team" style="color: #16a085;">My Team</label>
+      </div>
+      <div class="error-message" id="registrationTypeError" style="color: red;"></div>
+  </div>
+
+  <!-- Team Members Section (Hidden initially) -->
+<div id="teamSection" style="display: none; margin-bottom: 15px;">
+  <!-- Name Section -->
+  <label for="teamMemberName" style="font-weight: bold; color: #2c3e50;">
+    Team Member Name(s) <span style="color: red;">*</span>
+  </label><br>
+  <textarea id="teamMemberName" name="teamMemberName" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" 
+            placeholder="Enter team member names (If more than 1 members, separate names with commas)"></textarea>
+  <div class="error-message" id="teamMemberNameError" style="color: red;"></div>
+
+  <!-- Email Section -->
+  <label for="teamMemberEmail" style="font-weight: bold; color: #2c3e50; margin-top: 10px;">
+    Team Member Email(s) <span style="color: red;">*</span>
+  </label><br>
+  <textarea id="teamMemberEmail" name="teamMemberEmail" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" 
+            placeholder="Enter team member emails (Separate each email with a comma if more than 1)"></textarea>
+  <div class="error-message" id="teamMemberEmailError" style="color: red;"></div>
+
+  <!-- Phone Number Section -->
+  <label for="teamMemberPhone" style="font-weight: bold; color: #2c3e50; margin-top: 10px;">
+    Team Member Phone Number(s) <span style="color: red;">*</span>
+  </label><br>
+  <textarea id="teamMemberPhone" name="teamMemberPhone" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" 
+            placeholder="Enter team member phone numbers (Separate numbers with commas if more than 1)"></textarea>
+  <div class="error-message" id="teamMemberPhoneError" style="color: red;"></div>
+
+  <!-- ID Proof Upload Section -->
+  <div style="margin-top: 15px;">
+    <label for="teamidProof" style="font-weight: bold; color: #2c3e50;">
+      Upload Team Members' ID Proofs <span style="color: red;">*</span>
+    </label><br>
+    <input
+      type="file"
+      id="teamidProof"
+      name="teamidProof"
+      accept=".pdf,.jpg,.png,.jpeg"
+      required
+      multiple
+      style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+    />
+    <small style="color: #2c3e50;">(If more than 1 members, upload a single pdf file containing all ID proofs.)</small>
+    <div class="error-message" id="teamidProofError" style="color: red;"></div>
+  </div>
+</div>
+    <!-- Event Selection -->
+    <div style="margin-bottom: 15px;">
+      <label style="font-weight: bold; color: #2c3e50;">Select Event <span style="color: red;">*</span></label>
+      <div style="margin-top: 10px;">
+        <input type="radio" id="offline" name="event" value="Offline" required />
+        <label for="offline" style="color: #16a085;">27 Nov.2024 Online, 28 Nov.2024 Offline</label>
+      </div>
+      <div>
+        <input type="radio" id="online" name="event" value="Online" required />
+        <label for="online" style="color: #16a085;">27 & 28 Nov.2024 Both Days Online</label>
+      </div>
+      <div class="error-message" id="eventError" style="color: red;"></div>
+    </div>
+  
+    <!-- Category Selection -->
+    <div style="margin-bottom: 15px;">
+      <label for="category" style="font-weight: bold; color: #2c3e50;">Select Category <span style="color: red;">*</span></label><br>
+      <select id="category" name="category" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
+        <option value="">Select a category</option>
+        <option value="IISD-CMI Member">IISD-CMI Member</option>
+        <option value="Foreign National">Foreign National</option>
+        <option value="NPO/CBO/NGO">NGO/CBO</option>
+        <option value="Researcher/Scholar/Academic">Researcher/Academician</option>
+        <option value="Student">Student/PhD Scholar</option>
+        <option value="General">General (None of the above)</option>
+      </select>
+      <div class="error-message" id="categoryError" style="color: red;"></div>
+    </div>
+  </div>
+  <br>
+
+    <h3 style="color: darkred; text-align: center; font-style: italic; font-weight: normal;">
       Banking and Payment Information
     </h3>    
-    <p style="text-align: center;">
+    <p style="text-align: center; color: darkblue">
       Calculate the amount of fee you should pay using the calculator below:
     </p>
         <!-- Calculator Button -->
-        <button type="button" id="openCalculator" style="align-content: center;">Open Fee Calculator</button>
+        <button type="button" id="openCalculator" style="align-content: center; background-color: #4a90e2; border-radius: 3px; color: white;">Open Fee Calculator</button>
         
         <!-- Calculator Modal -->
         <div id="calculatorModal" class="modal">
@@ -585,7 +809,7 @@ label {
         </div>
         <br>
     <!-- Bank Details -->
-    <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #ccc;">
+    <div style="background-color: lightcyan; padding: 15px; border-radius: 8px; border: 1px solid #ccc;">
       <p><strong>In Favour of:</strong> Indian Institute of Sustainable Development</p>
       <p><strong>Bank Name:</strong> State Bank of India</p>
       <p><strong>Branch:</strong> West Vinod Nagar</p>
@@ -595,7 +819,7 @@ label {
   
     <!-- UPI and QR Code Payment Options -->
     <div style="margin-top: 20px;">
-      <h4 style="color: #2c3e50; text-align: center;">Other Payment Methods</h4>
+      <h4 style="color: darkblue; text-align: center;">Other Payment Methods</h4>
       <p style="text-align: center;"><strong>UPI ID:</strong> 7011510990@SBI</p>
       <div style="text-align: center;">
         <p>Scan the QR code below to make a payment:</p>
@@ -639,8 +863,7 @@ label {
   <!-- Consent Checkbox -->
   <div style="margin-bottom: 15px;">
     <label style="font-weight: bold; color: #2c3e50;">
-      <input type="checkbox" name="consent" id="consent" required /> I consent to
-      the terms and conditions <span style="color: red;">*</span>
+      <input type="checkbox" name="consent" id="consent" required />I consent to the terms and conditions of the Global Sustainability Summit 2024 <span style="color: red;">*</span>
     </label>
     <div class="error-message" id="consentError" style="color: red;"></div>
   </div>
@@ -868,7 +1091,7 @@ function toggleTeamSection() {
 
             Promise.all(filePromises).then(function() {
                 $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbwOkWyp_SQyVV4N380qt_17Xx5wGsEErETkSsv6YJ-ZiKs48wKyRsbpgILbPyqyIzpM/exec",
+                    url: "https://script.google.com/macros/s/AKfycbxwBouLP3IH5K664EsMQ_jnmic_YE87rHneZ_63h0EwaLE3O3TZ2-hwkir3XgKvRVvn/exec",
                     method: "POST",
                     data: formData,
                     processData: false,
