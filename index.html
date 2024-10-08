@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Sustainability Summit 2024 Registration Form</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <style>
-      
-
-
-      :root {
+<style>
+:root {
   --primary-color: #4caf50;
   --secondary-color: #45a049;
   --background-color: #f0f8ff;
@@ -28,7 +25,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Logo */
 .logo {
   text-align: center;
   margin-bottom: 10px;
@@ -40,7 +36,6 @@ body {
   animation: fadeIn 1s ease-in-out;
 }
 
-/* Headings */
 h2 {
   color: var(--primary-color);
   text-align: center;
@@ -50,7 +45,6 @@ h2 {
   animation: slideIn 1s ease-in-out;
 }
 
-/* Form Styles */
 form {
   background-color: white;
   padding: 30px;
@@ -89,7 +83,6 @@ textarea:focus {
   outline: none;
 }
 
-/* Event Details */
 .event-details {
   font-family: Arial, sans-serif;
   line-height: 1.2;
@@ -113,7 +106,6 @@ textarea:focus {
   margin-left: 20px;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -162,7 +154,6 @@ textarea:focus {
   text-decoration: none;
 }
 
-/* Calculator */
 #calculatorContent {
   display: flex;
   flex-direction: column;
@@ -203,13 +194,11 @@ textarea:focus {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Animation for form */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* Animation for headings */
 @keyframes slideIn {
   from {
     transform: translateY(-50px);
@@ -221,7 +210,6 @@ textarea:focus {
   }
 }
 
-/* Submit Button */
 button[type="button"] {
   background-color: var(--primary-color);
   color: white;
@@ -237,7 +225,6 @@ button[type="button"]:hover {
   background-color: var(--secondary-color);
 }
 
-/* Media query for small screens */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -275,7 +262,6 @@ button[type="button"]:hover {
   }
 }
 
-/* Media query for extra-small screens */
 @media (max-width: 480px) {
   body {
     padding: 5px;
@@ -312,7 +298,6 @@ button[type="button"]:hover {
     padding: 10px;
   }
 
-  /* Calculator adjustments for small screens */
   #calculatorContent {
     gap: 5px;
   }
@@ -325,7 +310,6 @@ button[type="button"]:hover {
   }
 }
 
-/* Animations */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -341,8 +325,7 @@ button[type="button"]:hover {
 .pulse {
   animation: pulse 2s infinite;
 }
-
-    </style>
+</style>
 </head>
 <body><div class="logo">
     <img
@@ -351,17 +334,13 @@ button[type="button"]:hover {
     />
   </div>
     <h2>The Global Sustainability Summit (GSS) 2024<br><strong style="color:darkred;">Registration Form</strong></h2>
-    <!-- About Section -->
+<!-- About Section -->
 <section id="about" style="padding: 10px 0;">
   <div class="container" style="font-family: Arial, sans-serif;  margin: auto; padding: 10px; border-radius: 8px; background-color: lavender; text-align: justify;">
     <p style="color: #34495e; line-height: 1.8;">
       <strong>The Global Sustainability Summit (GSS) 2024 </strong>is an Annual Flagship <strong>Global Program of IISD-CMI</strong> to showcase <strong>India's Global Leadership in the field of Sustainability and Decarbonization</strong>, Since both Institutes have completed over 16 years of Dedicated Services to the Nation and the Planet. <strong>IISD-CMI are Proud National Public Policy think tanks</strong> and <strong>Scientific Research Organizations</strong> based in New Delhi. They work with <strong>the Central and State Governments in India</strong>, UN Member States, International Scientific Laboratories, a network of Credible Universities, leading Diplomats and Policymakers, Industry and Business Leaders, Academicians, Women and Youth, Global thought Leaders, and Prolific Thinkers around the World.
     </p>
-    <button id="knowMoreBtn" style="background-color: #3498db; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Know More</button>
-
-    <!-- Hidden Section (Initially Hidden) -->
-    <div id="knowMoreContent" style="display: none; margin-top: 20px; color: #34495e; line-height: 1.8;">
-      <p>Follow Us On LinkedIn:</p>
+    <p style="color: darkred;">Follow Us On LinkedIn:</p>
       <ul>
         <li>
           <a href="https://www.linkedin.com/company/iisdindia/" target="_blank" style="color: #180f90;">
@@ -387,29 +366,13 @@ button[type="button"]:hover {
     </div>
   </div>
 </section>
-
-<script>
-  // Show/Hide Know More Content
-  document.getElementById('knowMoreBtn').addEventListener('click', function() {
-    var content = document.getElementById('knowMoreContent');
-    if (content.style.display === 'none') {
-      content.style.display = 'block';
-      this.innerText = 'Show Less';
-    } else {
-      content.style.display = 'none';
-      this.innerText = 'Know More';
-    }
-  });
-</script>
-
-    
-    <form
+<form
       id="registrationForm"
       method="post"
-      action="https://script.google.com/macros/s/AKfycbxwBouLP3IH5K664EsMQ_jnmic_YE87rHneZ_63h0EwaLE3O3TZ2-hwkir3XgKvRVvn/exec"
+      action="https://script.google.com/macros/s/AKfycbw39DD2TVsKTeCrLwptrHDkk55Wa5Rfo2oCpNSdmaWrDhcWrSnp25w72dcLDAi15X8h2A/exec"
       style="background-color: lavenderblush;"
     >
-    <!-- Title Field (Optional) -->
+<!-- Title Field (Optional) -->
 <div style="font-family: Arial, sans-serif;  margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
     <div style="margin-bottom: 15px;">
       <label for="title" style="font-weight: bold; color: #2c3e50;">Title <span style="color: red;">*</span></label><br>
@@ -429,7 +392,7 @@ button[type="button"]:hover {
     <!-- Name Field -->
     <div style="margin-bottom: 15px;">
       <label for="name" style="font-weight: bold; color: #2c3e50;">Name <span style="color: red;">*</span></label><br>
-      <input type="text" id="name" name="name" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your full name" />
+      <input type="text" id="name" name="name" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your full name As per government ID" />
       <div class="error-message" id="nameError" style="color: red;"></div>
     </div>
   
@@ -443,71 +406,283 @@ button[type="button"]:hover {
     <!-- Mobile Number Field -->
 <div style="margin-bottom: 15px;">
   <label for="mobile" style="font-weight: bold; color: #2c3e50;">Mobile Number (with country code) <span style="color: red;">*</span></label><br>
-  
   <div style="display: flex; align-items: center;">
     <!-- Country Code Dropdown -->
-    <select id="countryCode" name="countryCode" required style="width: 30%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-right: 10px;">
+    <select id="countryCode" name="countryCode" required style="width: 25%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-right: 10px;">
       <option value="">Select Country Code</option>
-      <option value="+1">+1 (USA)</option>
-      <option value="+91">+91 (India)</option>
-      <option value="+44">+44 (UK)</option>
-      <option value="+61">+61 (Australia)</option>
-      <option value="+81">+81 (Japan)</option>
-      <option value="+49">+49 (Germany)</option>
-      <option value="+33">+33 (France)</option>
-      <option value="+39">+39 (Italy)</option>
-      <option value="+86">+86 (China)</option>
-      <option value="+7">+7 (Russia)</option>
-      <option value="+55">+55 (Brazil)</option>
-      <option value="+34">+34 (Spain)</option>
-      <option value="+27">+27 (South Africa)</option>
-      <option value="+82">+82 (South Korea)</option>
-      <option value="+62">+62 (Indonesia)</option>
-      <option value="+60">+60 (Malaysia)</option>
-      <option value="+64">+64 (New Zealand)</option>
-      <option value="+971">+971 (UAE)</option>
-      <option value="+966">+966 (Saudi Arabia)</option>
-      <option value="+92">+92 (Pakistan)</option>
-      <option value="+880">+880 (Bangladesh)</option>
-      <option value="+94">+94 (Sri Lanka)</option>
-      <option value="+41">+41 (Switzerland)</option>
-      <option value="+46">+46 (Sweden)</option>
-      <option value="+47">+47 (Norway)</option>
-      <option value="+48">+48 (Poland)</option>
-      <option value="+351">+351 (Portugal)</option>
-      <option value="+31">+31 (Netherlands)</option>
-      <option value="+32">+32 (Belgium)</option>
-      <option value="+52">+52 (Mexico)</option>
-      <option value="+53">+53 (Cuba)</option>
-      <option value="+63">+63 (Philippines)</option>
-      <option value="+65">+65 (Singapore)</option>
-      <option value="+64">+64 (New Zealand)</option>
-      <option value="+998">+998 (Uzbekistan)</option>
-      <option value="+84">+84 (Vietnam)</option>
-      <!-- Add more country codes if necessary -->
+      <option value="+93">Afghanistan (+93)</option>
+            <option value="+355">Albania (+355)</option>
+            <option value="+213">Algeria (+213)</option>
+            <option value="+1684">American Samoa (+1684)</option>
+            <option value="+376">Andorra (+376)</option>
+            <option value="+244">Angola (+244)</option>
+            <option value="+1264">Anguilla (+1264)</option>
+            <option value="+672">Antarctica (+672)</option>
+            <option value="+1268">Antigua and Barbuda (+1268)</option>
+            <option value="+54">Argentina (+54)</option>
+            <option value="+374">Armenia (+374)</option>
+            <option value="+297">Aruba (+297)</option>
+            <option value="+61">Australia (+61)</option>
+            <option value="+43">Austria (+43)</option>
+            <option value="+994">Azerbaijan (+994)</option>
+            <option value="+1242">Bahamas (+1242)</option>
+            <option value="+973">Bahrain (+973)</option>
+            <option value="+880">Bangladesh (+880)</option>
+            <option value="+1246">Barbados (+1246)</option>
+            <option value="+375">Belarus (+375)</option>
+            <option value="+32">Belgium (+32)</option>
+            <option value="+501">Belize (+501)</option>
+            <option value="+229">Benin (+229)</option>
+            <option value="+1441">Bermuda (+1441)</option>
+            <option value="+975">Bhutan (+975)</option>
+            <option value="+591">Bolivia (+591)</option>
+            <option value="+387">Bosnia and Herzegovina (+387)</option>
+            <option value="+267">Botswana (+267)</option>
+            <option value="+55">Brazil (+55)</option>
+            <option value="+246">British Indian Ocean Territory (+246)</option>
+            <option value="+1284">British Virgin Islands (+1284)</option>
+            <option value="+673">Brunei (+673)</option>
+            <option value="+359">Bulgaria (+359)</option>
+            <option value="+226">Burkina Faso (+226)</option>
+            <option value="+257">Burundi (+257)</option>
+            <option value="+855">Cambodia (+855)</option>
+            <option value="+237">Cameroon (+237)</option>
+            <option value="+1">Canada (+1)</option>
+            <option value="+238">Cape Verde (+238)</option>
+            <option value="+1345">Cayman Islands (+1345)</option>
+            <option value="+236">Central African Republic (+236)</option>
+            <option value="+235">Chad (+235)</option>
+            <option value="+56">Chile (+56)</option>
+            <option value="+86">China (+86)</option>
+            <option value="+57">Colombia (+57)</option>
+            <option value="+269">Comoros (+269)</option>
+            <option value="+682">Cook Islands (+682)</option>
+            <option value="+506">Costa Rica (+506)</option>
+            <option value="+385">Croatia (+385)</option>
+            <option value="+53">Cuba (+53)</option>
+            <option value="+357">Cyprus (+357)</option>
+            <option value="+420">Czech Republic (+420)</option>
+            <option value="+243">Democratic Republic of the Congo (+243)</option>
+            <option value="+45">Denmark (+45)</option>
+            <option value="+253">Djibouti (+253)</option>
+            <option value="+1767">Dominica (+1767)</option>
+            <option value="+1809">Dominican Republic (+1809)</option>
+            <option value="+593">Ecuador (+593)</option>
+            <option value="+20">Egypt (+20)</option>
+            <option value="+503">El Salvador (+503)</option>
+            <option value="+240">Equatorial Guinea (+240)</option>
+            <option value="+291">Eritrea (+291)</option>
+            <option value="+372">Estonia (+372)</option>
+            <option value="+251">Ethiopia (+251)</option>
+            <option value="+500">Falkland Islands (+500)</option>
+            <option value="+298">Faroe Islands (+298)</option>
+            <option value="+679">Fiji (+679)</option>
+            <option value="+358">Finland (+358)</option>
+            <option value="+33">France (+33)</option>
+            <option value="+594">French Guiana (+594)</option>
+            <option value="+689">French Polynesia (+689)</option>
+            <option value="+241">Gabon (+241)</option>
+            <option value="+220">Gambia (+220)</option>
+            <option value="+995">Georgia (+995)</option>
+            <option value="+49">Germany (+49)</option>
+            <option value="+233">Ghana (+233)</option>
+            <option value="+350">Gibraltar (+350)</option>
+            <option value="+30">Greece (+30)</option>
+            <option value="+299">Greenland (+299)</option>
+            <option value="+1473">Grenada (+1473)</option>
+            <option value="+590">Guadeloupe (+590)</option>
+            <option value="+1671">Guam (+1671)</option>
+            <option value="+502">Guatemala (+502)</option>
+            <option value="+224">Guinea (+224)</option>
+            <option value="+245">Guinea-Bissau (+245)</option>
+            <option value="+592">Guyana (+592)</option>
+            <option value="+509">Haiti (+509)</option>
+            <option value="+504">Honduras (+504)</option>
+            <option value="+852">Hong Kong (+852)</option>
+            <option value="+36">Hungary (+36)</option>
+            <option value="+354">Iceland (+354)</option>
+            <option value="+91">India (+91)</option>
+            <option value="+62">Indonesia (+62)</option>
+            <option value="+98">Iran (+98)</option>
+            <option value="+964">Iraq (+964)</option>
+            <option value="+353">Ireland (+353)</option>
+            <option value="+972">Israel (+972)</option>
+            <option value="+39">Italy (+39)</option>
+            <option value="+1876">Jamaica (+1876)</option>
+            <option value="+81">Japan (+81)</option>
+            <option value="+962">Jordan (+962)</option>
+            <option value="+7">Kazakhstan (+7)</option>
+            <option value="+254">Kenya (+254)</option>
+            <option value="+686">Kiribati (+686)</option>
+            <option value="+383">Kosovo (+383)</option>
+            <option value="+965">Kuwait (+965)</option>
+            <option value="+996">Kyrgyzstan (+996)</option>
+            <option value="+856">Laos (+856)</option>
+            <option value="+371">Latvia (+371)</option>
+            <option value="+370">Lithuania (+370)</option>
+            <option value="+352">Luxembourg (+352)</option>
+            <option value="+853">Macau (+853)</option>
+            <option value="+389">North Macedonia (+389)</option>
+            <option value="+261">Madagascar (+261)</option>
+            <option value="+265">Malawi (+265)</option>
+            <option value="+60">Malaysia (+60)</option>
+            <option value="+960">Maldives (+960)</option>
+            <option value="+223">Mali (+223)</option>
+            <option value="+356">Malta (+356)</option>
+            <option value="+692">Marshall Islands (+692)</option>
+            <option value="+596">Martinique (+596)</option>
+            <option value="+222">Mauritania (+222)</option>
+            <option value="+230">Mauritius (+230)</option>
+            <option value="+262">Mayotte (+262)</option>
+            <option value="+52">Mexico (+52)</option>
+            <option value="+691">Micronesia (+691)</option>
+            <option value="+373">Moldova (+373)</option>
+            <option value="+377">Monaco (+377)</option>
+            <option value="+976">Mongolia (+976)</option>
+            <option value="+382">Montenegro (+382)</option>
+            <option value="+1664">Montserrat (+1664)</option>
+            <option value="+212">Morocco (+212)</option>
+            <option value="+258">Mozambique (+258)</option>
+            <option value="+95">Myanmar (+95)</option>
+            <option value="+264">Namibia (+264)</option>
+            <option value="+674">Nauru (+674)</option>
+            <option value="+977">Nepal (+977)</option>
+            <option value="+31">Netherlands (+31)</option>
+            <option value="+687">New Caledonia (+687)</option>
+            <option value="+64">New Zealand (+64)</option>
+            <option value="+505">Nicaragua (+505)</option>
+            <option value="+227">Niger (+227)</option>
+            <option value="+234">Nigeria (+234)</option>
+            <option value="+683">Niue (+683)</option>
+            <option value="+672">Norfolk Island (+672)</option>
+            <option value="+850">North Korea (+850)</option>
+            <option value="+47">Norway (+47)</option>
+            <option value="+968">Oman (+968)</option>
+            <option value="+92">Pakistan (+92)</option>
+            <option value="+680">Palau (+680)</option>
+            <option value="+970">Palestine (+970)</option>
+            <option value="+507">Panama (+507)</option>
+            <option value="+675">Papua New Guinea (+675)</option>
+            <option value="+595">Paraguay (+595)</option>
+            <option value="+51">Peru (+51)</option>
+            <option value="+63">Philippines (+63)</option>
+            <option value="+48">Poland (+48)</option>
+            <option value="+351">Portugal (+351)</option>
+            <option value="+1787">Puerto Rico (+1787)</option>
+            <option value="+974">Qatar (+974)</option>
+            <option value="+242">Republic of the Congo (+242)</option>
+            <option value="+262">Réunion (+262)</option>
+            <option value="+40">Romania (+40)</option>
+            <option value="+7">Russia (+7)</option>
+            <option value="+250">Rwanda (+250)</option>
+            <option value="+590">Saint Barthélemy (+590)</option>
+            <option value="+290">Saint Helena (+290)</option>
+            <option value="+1869">Saint Kitts and Nevis (+1869)</option>
+            <option value="+1758">Saint Lucia (+1758)</option>
+            <option value="+590">Saint Martin (+590)</option>
+            <option value="+508">Saint Pierre and Miquelon (+508)</option>
+            <option value="+1784">Saint Vincent and the Grenadines (+1784)</option>
+            <option value="+685">Samoa (+685)</option>
+            <option value="+378">San Marino (+378)</option>
+            <option value="+239">São Tomé and Príncipe (+239)</option>
+            <option value="+966">Saudi Arabia (+966)</option>
+            <option value="+221">Senegal (+221)</option>
+            <option value="+381">Serbia (+381)</option>
+            <option value="+248">Seychelles (+248)</option>
+            <option value="+232">Sierra Leone (+232)</option>
+            <option value="+65">Singapore (+65)</option>
+            <option value="+421">Slovakia (+421)</option>
+            <option value="+386">Slovenia (+386)</option>
+            <option value="+677">Solomon Islands (+677)</option>
+            <option value="+252">Somalia (+252)</option>
+            <option value="+27">South Africa (+27)</option>
+            <option value="+82">South Korea (+82)</option>
+            <option value="+211">South Sudan (+211)</option>
+            <option value="+34">Spain (+34)</option>
+            <option value="+94">Sri Lanka (+94)</option>
+            <option value="+249">Sudan (+249)</option>
+            <option value="+597">Suriname (+597)</option>
+            <option value="+47">Svalbard and Jan Mayen (+47)</option>
+            <option value="+268">Swaziland (+268)</option>
+            <option value="+46">Sweden (+46)</option>
+            <option value="+41">Switzerland (+41)</option>
+            <option value="+963">Syria (+963)</option>
+            <option value="+886">Taiwan (+886)</option>
+            <option value="+992">Tajikistan (+992)</option>
+            <option value="+255">Tanzania (+255)</option>
+            <option value="+66">Thailand (+66)</option>
+            <option value="+670">Timor-Leste (+670)</option>
+            <option value="+228">Togo (+228)</option>
+            <option value="+690">Tokelau (+690)</option>
+            <option value="+676">Tonga (+676)</option>
+            <option value="+1868">Trinidad and Tobago (+1868)</option>
+            <option value="+216">Tunisia (+216)</option>
+            <option value="+90">Turkey (+90)</option>
+            <option value="+993">Turkmenistan (+993)</option>
+            <option value="+1649">Turks and Caicos Islands (+1649)</option>
+            <option value="+688">Tuvalu (+688)</option>
+            <option value="+256">Uganda (+256)</option>
+            <option value="+380">Ukraine (+380)</option>
+            <option value="+971">United Arab Emirates (+971)</option>
+            <option value="+44">United Kingdom (+44)</option>
+            <option value="+1">United States (+1)</option>
+            <option value="+598">Uruguay (+598)</option>
+            <option value="+998">Uzbekistan (+998)</option>
+            <option value="+678">Vanuatu (+678)</option>
+            <option value="+58">Venezuela (+58)</option>
+            <option value="+84">Vietnam (+84)</option>
+            <option value="+681">Wallis and Futuna (+681)</option>
+            <option value="+967">Yemen (+967)</option>
+            <option value="+260">Zambia (+260)</option>
+            <option value="+263">Zimbabwe (+263)</option>
     </select>
-
-    <!-- Phone Number Input -->
+  <!-- Phone Number Input -->
     <input type="tel" id="mobile" name="mobile" required style="width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="1234567890" />
   </div>
-
   <div class="error-message" id="mobileError" style="color: red;"></div>
 </div>
 
   
-    <!-- Organization Field -->
-    <div style="margin-bottom: 15px;">
-      <label for="organization" style="font-weight: bold; color: #2c3e50;">Afiliated Organization / Freelancer <span style="color: red;">*</span></label><br>
-      <input type="text" id="organization" name="organization" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your organization name" />
-      <div class="error-message" id="organizationError" style="color: red;"></div>
-    </div>
-  
-    <!-- Designation Field -->
-    <div style="margin-bottom: 15px;">
-      <label for="designation" style="font-weight: bold; color: #2c3e50;">Designation <span style="color: red;">*</span></label><br>
-      <input type="text" id="designation" name="designation" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your designation" />
-      <div class="error-message" id="designationError" style="color: red;"></div>
-    </div>
+    <!-- Choose Affiliated Organization or Freelancer -->
+<div style="margin-bottom: 15px;">
+  <label for="affiliationType" style="font-weight: bold; color: #2c3e50;">Affiliation Type <span style="color: red;">*</span></label><br>
+  <select id="affiliationType" name="affiliationType" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" onchange="toggleFields()">
+    <option value="" disabled selected>Select your Affiliation Type</option>
+    <option value="organization">Affiliated Organization</option>
+    <option value="freelancer">Freelancer</option>
+  </select>
+</div>
+
+<!-- Organization Field -->
+<div id="organizationField" style="margin-bottom: 15px; display: none;">
+  <label for="organization" style="font-weight: bold; color: #2c3e50;">Affiliated Organization <span style="color: red;">*</span></label><br>
+  <input type="text" id="organization" name="organization" style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your organization name" />
+  <div class="error-message" id="organizationError" style="color: red;"></div>
+</div>
+
+<!-- Designation Field -->
+<div id="designationField" style="margin-bottom: 15px; display: none;">
+  <label for="designation" style="font-weight: bold; color: #2c3e50;">Designation <span style="color: red;">*</span></label><br>
+  <input type="text" id="designation" name="designation" style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your designation" />
+  <div class="error-message" id="designationError" style="color: red;"></div>
+</div>
+
+<script>
+  function toggleFields() {
+    const affiliationType = document.getElementById("affiliationType").value;
+    const organizationField = document.getElementById("organizationField");
+    const designationField = document.getElementById("designationField");
+
+    if (affiliationType === "organization") {
+      organizationField.style.display = "block";
+      designationField.style.display = "block";
+    } else {
+      organizationField.style.display = "none";
+      designationField.style.display = "none";
+    }
+  }
+</script>
+
     <!-- id proof field -->
     <div style="margin-bottom: 15px;">
     <label for="idProof" style="font-weight: bold; color: #2c3e50;">
@@ -521,7 +696,7 @@ button[type="button"]:hover {
       required
       style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
     /><br>
-    <small style="color: #2c3e50;">(Your ID proof should include both sides of the document)</small>
+    <small style="color: #2c3e50;">(Your ID proof should include both sides of the document File format .jpg, .png, .pdf of length upto 1 MB)</small>
     <div class="error-message" id="idProofError" style="color: red;"></div>
   </div>
   <!-- Address Field -->
@@ -529,101 +704,6 @@ button[type="button"]:hover {
     <label for="address" style="font-weight: bold; color: #2c3e50;">Full Address <span style="color: red;">*</span></label><br>
     <input type="text" id="address" name="address" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your address" />
     <div class="error-message" id="addressError" style="color: red;"></div>
-  </div>
-<!--  -->
-  <!--  -->
-
-  
-
-      <!-- Net Zero Event Participation Form -->
-<div style="font-family: Arial, sans-serif; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
-    <h3 style="color: darkblue; text-align: center; font-style: italic; font-weight:600;">
-      "Help Us Make the Summit a Carbon Neutral Event"
-    </h3>
-    <!-- <hr /> -->
-    
-    <!-- City of Origin -->
-    <div class="form-section" style="margin-bottom: 15px;">
-      <label for="city" style="color: #2c3e50; font-weight: bold;">Please specify your starting location for travel to the event venue <span style="color: red;">*</span></label>
-      <input type="text" id="city" name="city" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
-    </div>
-
-    
-    <!-- Travel Method -->
-    <div class="form-section" style="margin-bottom: 15px;">
-      <label style="color: #2c3e50; font-weight: bold;">How will you Travel to the Event? <span style="color: red;">*</span></label>
-      <div class="form-group" style="margin-top: 10px;">
-        <input type="radio" id="car" name="travel" value="car" />
-        <label for="car" style="color: #16a085;">Car</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="bus" name="travel" value="bus" />
-        <label for="bus" style="color: #16a085;">Bus</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="train" name="travel" value="train" />
-        <label for="train" style="color: #16a085;">Train</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="flight" name="travel" value="flight" />
-        <label for="flight" style="color: #16a085;">Flight</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="flight" name="travel" value="flight" />
-        <label for="flight" style="color: #16a085;">Metro Rail</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="flight" name="travel" value="flight" />
-        <label for="flight" style="color: #16a085;">Two-Wheeler</label>
-      </div>
-    </div>
-  
-    <!-- Transportation Type -->
-    <div class="form-section" style="margin-bottom: 15px;">
-      <label style="color: #2c3e50; font-weight: bold;">Type of Transportation?</label>
-      <div class="form-group" style="margin-top: 10px;">
-        <input type="radio" id="fuelBased" name="transportationType" value="fuelBased" />
-        <label for="fuelBased" style="color: #16a085;">Petrol/Diesel-Based</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="electric" name="transportationType" value="electric" />
-        <label for="electric" style="color: #16a085;">Electric/Hybird/CNG</label>
-      </div>
-    </div>
-  
-    <!-- Flight Options -->
-    <div class="form-section" style="margin-bottom: 15px;">
-      <label style="color: #2c3e50; font-weight: bold;">Flight Option?</label>
-      <div class="form-group" style="margin-top: 10px;">
-        <input type="radio" id="economy" name="flightOption" value="economy" />
-        <label for="economy" style="color: #16a085;">First Class</label>
-      </div>
-      <div class="form-group" style="margin-top: 10px;">
-        <input type="radio" id="economy" name="flightOption" value="economy" />
-        <label for="economy" style="color: #16a085;">Economy</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="business" name="flightOption" value="business" />
-        <label for="business" style="color: #16a085;">Business</label>
-      </div>
-    </div>
-  
-    <!-- Food Preferences -->
-    <div class="form-section" style="margin-bottom: 15px;">
-      <label style="color: #2c3e50; font-weight: bold;">What is your Food Preference? <span style="color: red;">*</span></label>
-      <div class="form-group" style="margin-top: 10px;">
-        <input type="radio" id="vegan" name="foodPreference" value="vegan" />
-        <label for="vegan" style="color: #16a085;">Vegan</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="vegetarian" name="foodPreference" value="vegetarian" />
-        <label for="vegetarian" style="color: #16a085;">Vegetarian</label>
-      </div>
-      <div class="form-group">
-        <input type="radio" id="nonVegetarian" name="foodPreference" value="nonVegetarian" />
-        <label for="nonVegetarian" style="color: #16a085;">Non-Vegetarian</label>
-      </div>
-    </div>
   </div>
   <div class="event-details" style="font-family: Arial, sans-serif; margin: auto; padding: 15px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
         <h3 style="text-align: center; color: darkred; font-size: large;"><i><u>Registration fee structure</u></i></h3>
@@ -636,24 +716,37 @@ button[type="button"]:hover {
       
         <h4 style="color: darkblue;">Category of Offline Prices:</h4>
         <ul>
-          <li>Rs 1000 for students, Phd scholars</li>
-          <li>Rs 2500 for academics, professors, and PhD holders</li>
-          <li>Rs 2500 for CBOs and NPOs</li>
-          <li>Rs 5000 for general attendees (not included in previous categories)</li>
-          <li>$135 for Foreign Nationals, irrespective of the category</li>
+          <li>Rs 1000 for Students, Phd Scholars</li>
+          <li>Rs 2500 for Academicians, Professors, and PhD holders</li>
+          <li>Rs 2500 for NGOs and CBOs</li>
+          <li>Rs 5000 for General Attendees (not included in previous categories)</li>
+          <li>$135 for Foreign Nationals, irrespective of the Category</li>
         </ul>
       
         <p><strong>IISD-CMI Members:</strong> Free access to both the online and offline events.</p>
       
         <h4 style="color: darkblue;">Note:</h4>
         <ul>
-          <li>For groups of 10 or more, a 5% discount will be applied to the total price.</li>
-          <li>Please upload your category proof.</li>
+          <li>For groups of 10 or more, a <b>5% Discount</b> will be applied to the total fees.</li>
+          <li>Please upload your <b>Category Proof.</b></li>
           <li style="color: darkblue">Please upload your IISD-CMI Membership Certificate to get free access to the Summit in place of "Upload Payment Proof"</li>
         </ul>
     </div>
-      <!-- Registration Type -->
+<!-- Registration Type -->
 <div style="font-family: Arial, sans-serif;  margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+  <!-- Event Selection -->
+  <div style="margin-bottom: 15px;">
+    <label style="font-weight: bold; color: #2c3e50;">Select Event <span style="color: red;">*</span></label>
+    <div style="margin-top: 10px;">
+      <input type="radio" id="offline" name="event" value="Offline" required />
+      <label for="offline" style="color: #16a085;">27 Nov.2024 Online, 28 Nov.2024 Offline</label>
+    </div>
+    <div>
+      <input type="radio" id="online" name="event" value="Online" required />
+      <label for="online" style="color: #16a085;">27 & 28 Nov.2024 Both Days Online</label>
+    </div>
+    <div class="error-message" id="eventError" style="color: red;"></div>
+  </div>
   <div style="margin-bottom: 15px;">
       <label style="font-weight: bold; color: #2c3e50;">Select Registration Type <span style="color: red;">*</span></label>
       <div style="margin-top: 10px;">
@@ -693,155 +786,133 @@ button[type="button"]:hover {
             placeholder="Enter team member phone numbers (Separate numbers with commas if more than 1)"></textarea>
   <div class="error-message" id="teamMemberPhoneError" style="color: red;"></div>
 
-  <!-- ID Proof Upload Section -->
-  <div style="margin-top: 15px;">
-    <label for="teamidProof" style="font-weight: bold; color: #2c3e50;">
-      Upload Team Members' ID Proofs <span style="color: red;">*</span>
-    </label><br>
-    <input
-      type="file"
-      id="teamidProof"
-      name="teamidProof"
-      accept=".pdf,.jpg,.png,.jpeg"
-      required
-      multiple
-      style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
-    />
-    <small style="color: #2c3e50;">(If more than 1 members, upload a single pdf file containing all ID proofs.)</small>
-    <div class="error-message" id="teamidProofError" style="color: red;"></div>
-  </div>
+ <!-- ID Proof Upload Section -->
+<div style="margin-top: 15px;">
+  <label for="teamidProof" style="font-weight: bold; color: #2c3e50;">
+    Upload Team Members' ID Proofs <span style="color: red;">*</span>
+  </label><br>
+  <input
+    type="file"
+    id="teamidProof"
+    name="teamidProof[]"
+    accept=".pdf,.jpg,.png,.jpeg"
+    required
+    multiple
+    style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
+  />
+  <small style="color: #2c3e50;">(You can upload multiple files: PDF, JPG, PNG, or JPEG format allowed.)</small>
+  <div class="error-message" id="teamidProofError" style="color: red;"></div>
 </div>
-    <!-- Event Selection -->
-    <div style="margin-bottom: 15px;">
-      <label style="font-weight: bold; color: #2c3e50;">Select Event <span style="color: red;">*</span></label>
-      <div style="margin-top: 10px;">
-        <input type="radio" id="offline" name="event" value="Offline" required />
-        <label for="offline" style="color: #16a085;">27 Nov.2024 Online, 28 Nov.2024 Offline</label>
-      </div>
-      <div>
-        <input type="radio" id="online" name="event" value="Online" required />
-        <label for="online" style="color: #16a085;">27 & 28 Nov.2024 Both Days Online</label>
-      </div>
-      <div class="error-message" id="eventError" style="color: red;"></div>
-    </div>
-  
-    <!-- Category Selection -->
-    <div style="margin-bottom: 15px;">
-      <label for="category" style="font-weight: bold; color: #2c3e50;">Select Category <span style="color: red;">*</span></label><br>
-      <select id="category" name="category" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
-        <option value="">Select a category</option>
-        <option value="IISD-CMI Member">IISD-CMI Member</option>
-        <option value="Foreign National">Foreign National</option>
-        <option value="NPO/CBO/NGO">NGO/CBO</option>
-        <option value="Researcher/Scholar/Academic">Researcher/Academician</option>
-        <option value="Student">Student/PhD Scholar</option>
-        <option value="General">General (None of the above)</option>
-      </select>
-      <div class="error-message" id="categoryError" style="color: red;"></div>
-    </div>
-  </div>
-  <br>
-
-    <h3 style="color: darkred; text-align: center; font-style: italic; font-weight: normal;">
-      Banking and Payment Information
-    </h3>    
-    <p style="text-align: center; color: darkblue">
-      Calculate the amount of fee you should pay using the calculator below:
-    </p>
-        <!-- Calculator Button -->
-        <button type="button" id="openCalculator" style="align-content: center; background-color: #4a90e2; border-radius: 3px; color: white;">Open Fee Calculator</button>
-        
-        <!-- Calculator Modal -->
-        <div id="calculatorModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="calculator">
-                  <h4 style="color : darkblue">Event Registration Calculator</h4>
-          
-                  <section id="nationalitySection">
-                      <label for="nationality">Nationality:</label>
-                      <select id="nationality" onchange="handleNationalityChange()">
-                          <option value="">Select</option>
-                          <option value="indian">Indian</option>
-                          <option value="foreign">Foreign</option>
-                      </select>
-                  </section>
-          
-                  <section id="registrationType">
-                      <label for="regType">Registering for:</label>
-                      <select id="regType" onchange="handleRegistrationTypeChange()">
-                          <option value="">Select</option>
-                          <option value="self">Less than 10</option>
-                          <option value="group">10 or more</option>
-                      </select>
-                  </section>
-          
-                  <section id="numberOfPeople">
-                      <label for="peopleCount">Number of people:</label>
-                      <input type="number" id="peopleCount" min="1" step="1" placeholder="Enter number of people">
-                  </section>
-          
-                  <section id="categorySection">
-                      <label for="categorySelect">Category:</label>
-                      <select id="categorySelect">
-                          <option value="">Select</option>
-                          <option value="student">Student</option>
-                          <option value="academic">Academic/Professor/Scholars/PhD Holders</option>
-                          <option value="cbo_npo">CBOs/NPOs</option>
-                          <option value="general">General Attendees</option>
-                      </select>
-                  </section>
-          
-                  <section id="eventDay">
-                      <label for="eventDaySelect">Event Day:</label>
-                      <select id="eventDaySelect" onchange="handleEventDayChange()">
-                          <option value="">Select</option>
-                          <option value="online">27 Nov 2024 - Online</option>
-                          <option value="offline">28 Nov 2024 - Offline</option>
-                          <option value="both">Both</option>
-                      </select>
-                  </section>
-          
-                  <button onclick="calculateTotal()">Calculate Total</button>
-                  <div class="result" id="result"></div>
-                </div>
-            </div>
-        </div>
-        <br>
-    <!-- Bank Details -->
-    <div style="background-color: lightcyan; padding: 15px; border-radius: 8px; border: 1px solid #ccc;">
-      <p><strong>In Favour of:</strong> Indian Institute of Sustainable Development</p>
-      <p><strong>Bank Name:</strong> State Bank of India</p>
-      <p><strong>Branch:</strong> West Vinod Nagar</p>
-      <p><strong>Account Number:</strong> 62175298062</p>
-      <p><strong>IFSC Code:</strong> SBIN0021310</p>
-    </div>
-  
-    <!-- UPI and QR Code Payment Options -->
-    <div style="margin-top: 20px;">
-      <h4 style="color: darkblue; text-align: center;">Other Payment Methods</h4>
-      <p style="text-align: center;"><strong>UPI ID:</strong> 7011510990@SBI</p>
-      <div style="text-align: center;">
-        <p>Scan the QR code below to make a payment:</p>
-        <img src="QRCode.jpeg" alt="QR Code" style="width: 200px; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
-      </div>
-    </div>
-  </div>
-  <!-- Proof of Category Upload -->
-  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 8px;  margin: auto;">
+</div>
+<!--  -->
+<!-- Category Selection -->
 <div style="margin-bottom: 15px;">
-    <label for="categoryProof" style="font-weight: bold; color: #2c3e50;">
-      Please Upload Proof of Category <span style="color: red;">*</span>
-    </label><br>
-    <input
-      type="file"
-      id="categoryProof"
-      name="categoryProof"
-      accept=".pdf,.jpg,.png,.jpeg"
-      required
-      style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
-    />
-    <div class="error-message" id="categoryProofError" style="color: red;"></div>
+  <label for="category" style="font-weight: bold; color: #2c3e50;">Select Category <span style="color: red;">*</span></label><br>
+  <select id="category" name="category" required style="width: 97%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;" onchange="handleCategoryChange()">
+    <option value="">Select a category</option>
+    <option value="IISD-CMI Member">IISD-CMI Member</option>
+    <option value="Foreign National">Foreign National</option>
+    <option value="NPO/CBO/NGO">NGO/CBO</option>
+    <option value="Researcher/Scholar/Academic">Researcher/Academician</option>
+    <option value="Student">Student/PhD Scholar</option>
+    <option value="General">General (None of the above)</option>
+  </select>
+  <div class="error-message" id="categoryError" style="color: red;"></div>
+</div>
+
+<!-- Proof of Category Upload -->
+<div id="categoryProofSection" style="margin-bottom: 15px;">
+  <label for="categoryProof" style="font-weight: bold; color: #2c3e50;">
+    Please Upload Proof of Category <span style="color: red;">*</span>
+  </label><br>
+  <input type="file" id="categoryProof" name="categoryProof" accept=".pdf,.jpg,.png,.jpeg" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+  <div class="error-message" id="categoryProofError" style="color: red;"></div>
+</div>
+
+<!-- Payment Details Section -->
+<div id="paymentSection">
+  <h3 style="color: darkred; text-align: center; font-style: italic; font-weight: normal;">
+    Banking and Payment Information
+  </h3>    
+  <p style="text-align: center; color: darkblue">
+    Calculate the amount of fee you should pay using the calculator below:
+  </p>
+  
+  <!-- Calculator Button -->
+  <button type="button" id="openCalculator" style="align-content: center; background-color: #4a90e2; border-radius: 3px; color: white;">Open Fee Calculator</button>
+  <!-- Calculator Modal -->
+  <div id="calculatorModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="calculator">
+          <h4 style="color : darkblue">Event Registration Calculator</h4>
+  
+          <section id="nationalitySection">
+              <label for="nationality">Nationality:</label>
+              <select id="nationality" onchange="handleNationalityChange()">
+                  <option value="">Select</option>
+                  <option value="indian">Indian</option>
+                  <option value="foreign">Foreign</option>
+              </select>
+          </section>
+  
+          <section id="registrationType">
+              <label for="regType">Registering for:</label>
+              <select id="regType" onchange="handleRegistrationTypeChange()">
+                  <option value="">Select</option>
+                  <option value="self">Less than 10</option>
+                  <option value="group">10 or more</option>
+              </select>
+          </section>
+  
+          <section id="numberOfPeople">
+              <label for="peopleCount">Number of people:</label>
+              <input type="number" id="peopleCount" min="1" step="1" placeholder="Enter number of people">
+          </section>
+  
+          <section id="categorySection">
+              <label for="categorySelect">Category:</label>
+              <select id="categorySelect">
+                  <option value="">Select</option>
+                  <option value="student">Student / Phd Scholars</option>
+                  <option value="academic">Academic/Professor/PhD Holders</option>
+                  <option value="cbo_npo">NGOs/CPOs</option>
+                  <option value="general">General Attendees</option>
+              </select>
+          </section>
+  
+          <section id="eventDay">
+              <label for="eventDaySelect">Event Day:</label>
+              <select id="eventDaySelect" onchange="handleEventDayChange()">
+                  <option value="">Select</option>
+                  <option value="online">27 & 28 Nov 2024 - Online</option>
+                  <option value="offline">27 online & 28 Nov 2024 - Offline</option>
+              </select>
+          </section>
+  
+          <button onclick="calculateTotal()">Calculate Total</button>
+          <div class="result" id="result"></div>
+        </div>
+    </div>
+</div>
+<br>
+  <!-- Bank Details -->
+  <div style="background-color: lightcyan; padding: 15px; border-radius: 8px; border: 1px solid #ccc;">
+    <p><strong>In Favour of:</strong> Indian Institute of Sustainable Development</p>
+    <p><strong>Bank Name:</strong> State Bank of India</p>
+    <p><strong>Branch:</strong> West Vinod Nagar</p>
+    <p><strong>Account Number:</strong> 62175298062</p>
+    <p><strong>IFSC Code:</strong> SBIN0021310</p>
+  </div>
+
+  <!-- UPI and QR Code Payment Options -->
+  <div style="margin-top: 20px;">
+    <h4 style="color: darkblue; text-align: center;">Other Payment Methods</h4>
+    <p style="text-align: center;"><strong>UPI ID:</strong> 7011510990@SBI</p>
+    <div style="text-align: center;">
+      <p>Scan the QR code below to make a payment:</p>
+      <img src="QRCode.jpeg" alt="QR Code" style="width: 200px; height: auto; border: 1px solid #ddd; border-radius: 8px;" />
+    </div>
   </div>
   
   <!-- Proof of Payment Upload -->
@@ -849,27 +920,137 @@ button[type="button"]:hover {
     <label for="PaymentProof" style="font-weight: bold; color: #2c3e50;">
       Please Upload Proof of Payment <span style="color: red;">*</span>
     </label><br>
-    <input
-      type="file"
-      id="PaymentProof"
-      name="PaymentProof"
-      accept=".pdf,.jpg,.png,.jpeg"
-      required
-      style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"
-    />
+    <input type="file" id="PaymentProof" name="PaymentProof" accept=".pdf,.jpg,.png,.jpeg" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
     <div class="error-message" id="paymentProofError" style="color: red;"></div>
   </div>
-  
-  <!-- Consent Checkbox -->
+</div>
+
+<script>
+ function handleCategoryChange() {
+    var category = document.getElementById('category').value;
+    var paymentSection = document.getElementById('paymentSection'); 
+    var paymentProof = document.getElementById('PaymentProof');
+
+    if (category === "IISD-CMI Member") {
+      paymentSection.style.display = "none"; 
+      paymentProof.removeAttribute('required');  
+    } else {
+      paymentSection.style.display = "block"; 
+      paymentProof.setAttribute('required', 'required'); 
+    }
+  }
+
+  document.getElementById('category').addEventListener('change', handleCategoryChange);
+
+  document.getElementById('yourFormId').addEventListener('submit', function(event) {
+    if (!validateForm()) {
+      event.preventDefault();  
+    }
+  });
+</script>
+
+
+
+<!-- Net Zero Event Participation Form -->
+<div style="font-family: Arial, sans-serif; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+  <h3 style="color: darkblue; text-align: center; font-style: italic; font-weight:600;">
+    "Help Us Make the Summit a Carbon Neutral Event"
+  </h3>
+<!-- City of Origin -->
+  <div class="form-section" style="margin-bottom: 15px;">
+    <label for="city" style="color: #2c3e50; font-weight: bold;">Please specify your starting location for travel to the event venue <span style="color: red;">*</span></label>
+    <input type="text" id="city" name="city" required style="width: 95%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+  </div>
+<!-- Travel Method -->
+  <div class="form-section" style="margin-bottom: 15px;">
+    <label style="color: #2c3e50; font-weight: bold;">How will you Travel to the Event? <span style="color: red;">*</span></label>
+    <div class="form-group" style="margin-top: 10px;">
+      <input type="radio" id="car" name="travel" value="car" />
+      <label for="car" style="color: #16a085;">Car</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="bus" name="travel" value="bus" />
+      <label for="bus" style="color: #16a085;">Bus</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="train" name="travel" value="train" />
+      <label for="train" style="color: #16a085;">Train</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="flight" name="travel" value="flight" />
+      <label for="flight" style="color: #16a085;">Flight</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="flight" name="travel" value="flight" />
+      <label for="flight" style="color: #16a085;">Metro Rail</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="flight" name="travel" value="flight" />
+      <label for="flight" style="color: #16a085;">Two-Wheeler</label>
+    </div>
+  </div>
+
+<!-- Transportation Type -->
+  <div class="form-section" style="margin-bottom: 15px;">
+    <label style="color: #2c3e50; font-weight: bold;">Type of Transportation?</label>
+    <div class="form-group" style="margin-top: 10px;">
+      <input type="radio" id="fuelBased" name="transportationType" value="fuelBased" />
+      <label for="fuelBased" style="color: #16a085;">Petrol/Diesel-Based</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="electric" name="transportationType" value="electric" />
+      <label for="electric" style="color: #16a085;">Electric</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="electric" name="transportationType" value="electric" />
+      <label for="electric" style="color: #16a085;">CNG</label>
+    </div>
+  </div>
+
+<!-- Flight Options -->
+  <div class="form-section" style="margin-bottom: 15px;">
+    <label style="color: #2c3e50; font-weight: bold;">Flight Option?</label>
+    <div class="form-group" style="margin-top: 10px;">
+      <input type="radio" id="economy" name="flightOption" value="economy" />
+      <label for="economy" style="color: #16a085;">First Class</label>
+    </div>
+    <div class="form-group" style="margin-top: 10px;">
+      <input type="radio" id="economy" name="flightOption" value="economy" />
+      <label for="economy" style="color: #16a085;">Economy</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="business" name="flightOption" value="business" />
+      <label for="business" style="color: #16a085;">Business</label>
+    </div>
+  </div>
+
+<!-- Food Preferences -->
+  <div class="form-section" style="margin-bottom: 15px;">
+    <label style="color: #2c3e50; font-weight: bold;">What is your Food Preference? <span style="color: red;">*</span></label>
+    <div class="form-group" style="margin-top: 10px;">
+      <input type="radio" id="vegan" name="foodPreference" value="vegan" />
+      <label for="vegan" style="color: #16a085;">Vegan</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="vegetarian" name="foodPreference" value="vegetarian" />
+      <label for="vegetarian" style="color: #16a085;">Vegetarian</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="nonVegetarian" name="foodPreference" value="nonVegetarian" />
+      <label for="nonVegetarian" style="color: #16a085;">Non-Vegetarian</label>
+    </div>
+  </div>
+</div>
+<br>
+<!-- Consent Checkbox -->
   <div style="margin-bottom: 15px;">
     <label style="font-weight: bold; color: #2c3e50;">
       <input type="checkbox" name="consent" id="consent" required />I consent to the terms and conditions of the Global Sustainability Summit 2024 <span style="color: red;">*</span>
     </label>
     <div class="error-message" id="consentError" style="color: red;"></div>
   </div>
-
-        <!-- Submit Button -->
-        <button style="background-color: darkred; color: #fff;
+<!-- Submit Button -->
+<button style="background-color: darkred; color: #fff;
         padding: 12px 20px;
         border: none;
         border-radius: 5px;
@@ -877,14 +1058,13 @@ button[type="button"]:hover {
         font-size: 16px;
         margin-top: 10px;
         transition: background-color 0.3s ease;" type="button" onclick="submitForm()">Submit</button>
-       
-    </form>
+</form>
 
-    <!-- Status Message Div -->
-    <div id="statusMessage"></div>
+<!-- Status Message Div -->
+<div id="statusMessage"></div>
 
-    <script>
-
+<!-- javaScript -->
+<script>
 function toggleTeamSection() {
     const teamSection = document.getElementById('teamSection');
     const teamSelected = document.getElementById('team').checked;
@@ -973,6 +1153,8 @@ function toggleTeamSection() {
         // Form Validation
         function validateForm() {
             let isValid = true;
+            var category = document.getElementById('category').value;
+            var paymentProof = document.getElementById('PaymentProof');
             const errorMessages = document.getElementsByClassName("error-message");
             for (let errorMessage of errorMessages) {
                 errorMessage.textContent = "";
@@ -1010,9 +1192,11 @@ function toggleTeamSection() {
                 isValid = false;
             }
 
-            if (!document.getElementById("PaymentProof").files.length) {
-                document.getElementById("paymentProofError").textContent = "Please upload a proof of payment.";
-                isValid = false;
+            if (category !== "IISD-CMI Member") {
+              if (!paymentProof.files.length) {
+                paymentProofError.textContent = "Please upload a proof of payment.";
+                  isValid = false;
+              }
             }
 
             // Validate consent
@@ -1091,7 +1275,7 @@ function toggleTeamSection() {
 
             Promise.all(filePromises).then(function() {
                 $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbxwBouLP3IH5K664EsMQ_jnmic_YE87rHneZ_63h0EwaLE3O3TZ2-hwkir3XgKvRVvn/exec",
+                    url: "https://script.google.com/macros/s/AKfycbw39DD2TVsKTeCrLwptrHDkk55Wa5Rfo2oCpNSdmaWrDhcWrSnp25w72dcLDAi15X8h2A/exec",
                     method: "POST",
                     data: formData,
                     processData: false,
@@ -1170,6 +1354,6 @@ function toggleTeamSection() {
                 document.getElementById("consentError").textContent = "";
             }
         });
-    </script>
+</script>
 </body>
 </html>
