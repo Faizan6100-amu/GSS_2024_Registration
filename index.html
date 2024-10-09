@@ -369,7 +369,7 @@ button[type="button"]:hover {
 <form
       id="registrationForm"
       method="post"
-      action="https://script.google.com/macros/s/AKfycbx-2RmmQBUzISiJfhzmD1e-3vLvtjWysQ_VAR5VopHjAaudOeHjcwZ9K-K5hG1pX6NWkg/exec"
+      action="https://script.google.com/macros/s/AKfycbw39DD2TVsKTeCrLwptrHDkk55Wa5Rfo2oCpNSdmaWrDhcWrSnp25w72dcLDAi15X8h2A/exec"
       style="background-color: lavenderblush;"
     >
 <!-- Title Field (Optional) -->
@@ -1245,14 +1245,14 @@ function toggleTeamSection() {
 
             Promise.all(filePromises).then(function() {
               // Assuming discount and totalPrice are already calculated
-              const discount = 20.00; // Example discount
-              const totalPrice = 100.00; // Example total price
+              // const discount = 20.00; // Example discount
+              // const totalPrice = 100.00; // Example total price
     
               // Append the discount and total price to the formData
-              formData.append('discount', discount.toFixed(2));
-              formData.append('totalPrice', (totalPrice - discount).toFixed(2));
+              // formData.append('discount', discount.toFixed(2));
+              // formData.append('totalPrice', (totalPrice - discount).toFixed(2));
                 $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbx-2RmmQBUzISiJfhzmD1e-3vLvtjWysQ_VAR5VopHjAaudOeHjcwZ9K-K5hG1pX6NWkg/exec",
+                    url: "https://script.google.com/macros/s/AKfycbw39DD2TVsKTeCrLwptrHDkk55Wa5Rfo2oCpNSdmaWrDhcWrSnp25w72dcLDAi15X8h2A/exec",
                     method: "POST",
                     data: formData,
                     processData: false,
