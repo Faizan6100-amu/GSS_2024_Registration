@@ -369,7 +369,7 @@ button[type="button"]:hover {
 <form
       id="registrationForm"
       method="post"
-      action="https://script.google.com/macros/s/AKfycbw39DD2TVsKTeCrLwptrHDkk55Wa5Rfo2oCpNSdmaWrDhcWrSnp25w72dcLDAi15X8h2A/exec"
+      action="https://script.google.com/macros/s/AKfycbwOZ9ulmSoZOUCUbL-Nkj61ZftyjkYPs37cwCkasUWkq9IhaKroV5cERt4y2CVJi_I9GQ/exec"
       style="background-color: lavenderblush;"
     >
 <!-- Title Field (Optional) -->
@@ -851,8 +851,8 @@ button[type="button"]:hover {
 
   <!-- Discount and Total Price Display -->
   <div id="discountPrice" class="price-display"></div>
-  <div id="totalPrice" class="price-display"></div>
- 
+  <div for="totalPriceInput" id="totalPriceInput" name="InputtotalPrice" class="price-display"></div>
+  <input type="hidden" id="totalPrice" name="totalPrice" value="">
 </form>
 
 <script>
@@ -941,9 +941,14 @@ button[type="button"]:hover {
       discount = 0.05 * totalPrice;
     }
 
+    
+
     // Display discount and total price
     document.getElementById('discountPrice').textContent = `Discount: ${currency}${discount.toFixed(2)}`;
-    document.getElementById('totalPrice').textContent = `Total Price: ${currency}${(totalPrice - discount).toFixed(2)}`;
+    document.getElementById('totalPriceInput').textContent = `Total Price: ${currency}${(totalPrice - discount).toFixed(2)}`;
+
+    // Set the calculated total price in the hidden input field
+    document.getElementById('totalPrice').value = `${currency}${(totalPrice - discount).toFixed(2)}`;
   }
 </script>
 
@@ -1244,15 +1249,8 @@ function toggleTeamSection() {
             }
 
             Promise.all(filePromises).then(function() {
-              // Assuming discount and totalPrice are already calculated
-              // const discount = 20.00; // Example discount
-              // const totalPrice = 100.00; // Example total price
-    
-              // Append the discount and total price to the formData
-              // formData.append('discount', discount.toFixed(2));
-              // formData.append('totalPrice', (totalPrice - discount).toFixed(2));
                 $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbw39DD2TVsKTeCrLwptrHDkk55Wa5Rfo2oCpNSdmaWrDhcWrSnp25w72dcLDAi15X8h2A/exec",
+                    url: "https://script.google.com/macros/s/AKfycbwOZ9ulmSoZOUCUbL-Nkj61ZftyjkYPs37cwCkasUWkq9IhaKroV5cERt4y2CVJi_I9GQ/exec",
                     method: "POST",
                     data: formData,
                     processData: false,
